@@ -1,0 +1,65 @@
+<svg width="100%" style="max-width:220px" viewBox="0 0 380 262" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>do-while loop — execution flow</title>
+  <desc>Execute Body first → check Condition → loop back if true, or Exit when false</desc>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="8" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="8" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#5DCAA5" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#E57373" stroke-width="1.5"
+        stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- START -->
+  <rect x="80" y="20" width="140" height="34" rx="17"
+    fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.8"/>
+  <text x="150" y="42" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="600" fill="#085041">START</text>
+
+  <line x1="150" y1="54" x2="150" y2="79" stroke="#888" stroke-width="1.2" marker-end="url(#a)"/>
+
+  <!-- BODY -->
+  <rect x="50" y="80" width="200" height="40" rx="8"
+    fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.8"/>
+  <text x="150" y="96" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="10" fill="#5F5E5A" letter-spacing="1">① BODY</text>
+  <text x="150" y="113" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="10" fill="#2C2C2A">execute loop body</text>
+
+  <line x1="150" y1="120" x2="150" y2="147" stroke="#888" stroke-width="1.2" marker-end="url(#a)"/>
+
+  <!-- CONDITION diamond -->
+  <polygon points="150,148 250,195 150,242 50,195"
+    fill="#FFF3E0" stroke="#FFB74D" stroke-width="0.8"/>
+  <text x="150" y="189" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="10" fill="#5F5E5A" letter-spacing="1">② CONDITION</text>
+  <text x="150" y="208" text-anchor="middle"
+    font-family="ui-monospace,monospace" font-size="12" font-weight="500" fill="#E65100">condition ?</text>
+
+  <!-- Loop back: Condition left → Body left (true) -->
+  <path d="M 50 195 L 18 195 L 18 100 L 50 100"
+    fill="none" stroke="#5DCAA5" stroke-width="1.2" marker-end="url(#ag)"/>
+  <text x="34" y="183" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="10" fill="#2E7D32">true</text>
+
+  <!-- CONDITION → END (false) -->
+  <line x1="250" y1="195" x2="272" y2="195" stroke="#E57373" stroke-width="1.2" marker-end="url(#ar)"/>
+  <text x="261" y="183" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="10" fill="#C62828">false</text>
+
+  <!-- END -->
+  <rect x="274" y="178" width="90" height="34" rx="17"
+    fill="#FDECEA" stroke="#E57373" stroke-width="0.8"/>
+  <text x="319" y="200" text-anchor="middle"
+    font-family="ui-sans-serif,sans-serif" font-size="13" font-weight="600" fill="#C62828">END</text>
+</svg>

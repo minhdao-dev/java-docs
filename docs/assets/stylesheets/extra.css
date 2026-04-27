@@ -1,0 +1,394 @@
+/* ── Language switcher ────────────────────────────────────────── */
+
+.md-header__option .md-select {
+    display: none !important;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    margin: 0 8px;
+}
+
+.lang-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    border: none;
+    background: rgba(0, 0, 0, 0.15);
+    color: #fff;
+    transition: background 0.2s ease;
+    text-decoration: none;
+}
+
+.lang-btn:hover {
+    background: rgba(0, 0, 0, 0.28);
+    color: #fff;
+    text-decoration: none;
+}
+
+.lang-btn.active {
+    background: rgba(0, 0, 0, 0.25);
+    color: #fff;
+}
+
+/* ── Prev / Next navigation ───────────────────────────────────── */
+
+.md-footer nav.md-footer__inner {
+    display: none;
+}
+
+.pn-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.pn-spacer {
+    display: block;
+}
+
+.pn-card {
+    display: inline-flex;
+    align-items: center;
+    gap: .25rem;
+    padding: .25rem .5rem;
+    border-radius: 2rem;
+    font-size: .75rem;
+    font-weight: 500;
+    color: var(--md-default-fg-color--light);
+    text-decoration: none !important;
+    transition: color .15s ease, background .15s ease;
+}
+
+.pn-card:hover {
+    color: var(--md-primary-fg-color);
+    background: rgba(14, 165, 233, .10);
+    text-decoration: none !important;
+}
+
+.pn-arrow {
+    width: 14px;
+    height: 14px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CUSTOM SKY BLUE COLOR SYSTEM
+   Primary: #0EA5E9 (Tailwind sky-500) — softer than Material light-blue
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-md-color-primary="custom"] {
+    --md-primary-fg-color:        #0EA5E9;
+    --md-primary-fg-color--light: #38BDF8;
+    --md-primary-fg-color--dark:  #0284C7;
+    --md-primary-bg-color:        #ffffff;
+    --md-primary-bg-color--light: rgba(255, 255, 255, 0.75);
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="custom"] {
+    --md-primary-fg-color:        #38BDF8;
+    --md-primary-fg-color--light: #7DD3FC;
+    --md-primary-fg-color--dark:  #0EA5E9;
+    --md-primary-bg-color:        #ffffff;
+    --md-primary-bg-color--light: rgba(255, 255, 255, 0.75);
+}
+
+/* ── Header — sky gradient ────────────────────────────────────── */
+
+/* Light mode: deep sky → clear sky → near-cloud (left-top to right-bottom) */
+[data-md-color-scheme="default"] .md-header {
+    background: linear-gradient(135deg, #0288D1 0%, #38BDF8 60%, #7DD3FC 100%);
+    box-shadow: 0 2px 20px rgba(2, 119, 189, 0.18);
+}
+
+[data-md-color-scheme="default"] .md-tabs {
+    background: linear-gradient(90deg, #29B6F6 0%, #4FC3F7 100%);
+}
+
+/* Dark mode: midnight sky */
+[data-md-color-scheme="slate"] .md-header {
+    background: linear-gradient(135deg, #01579B 0%, #0288D1 100%);
+    box-shadow: 0 2px 20px rgba(1, 87, 155, 0.35);
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+    background: rgba(2, 136, 209, 0.85);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   TYPOGRAPHY & CONTENT STYLING
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── H1 — page title ──────────────────────────────────────────── */
+
+.md-typeset h1 {
+    padding-bottom: 0.45rem;
+    border-bottom: 2px solid var(--md-primary-fg-color);
+    font-weight: 800;
+}
+
+/* ── H2 — main section headings ───────────────────────────────── */
+
+.md-typeset h2 {
+    margin-top: 2.4rem;
+    padding-left: 0.85rem;
+    border-left: 4px solid var(--md-primary-fg-color);
+    font-size: 1.2em;
+    font-weight: 700;
+}
+
+/* ── H3 — sub-section headings ────────────────────────────────── */
+
+.md-typeset h3 {
+    margin-top: 1.5rem;
+    padding-bottom: 0.22rem;
+    border-bottom: 1.5px solid rgba(14, 165, 233, 0.22);
+    font-size: 1em;
+    font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h3 {
+    border-bottom-color: rgba(56, 189, 248, 0.28);
+}
+
+/* ── H4 — detail headings ─────────────────────────────────────── */
+
+.md-typeset h4 {
+    color: var(--md-primary-fg-color);
+    font-size: 0.85em;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── Horizontal rule — section break ──────────────────────────── */
+
+.md-typeset hr {
+    margin: 2rem 0;
+    border-top-color: var(--md-default-fg-color--lightest);
+}
+
+/* ── Tables ───────────────────────────────────────────────────── */
+
+/* Rounded corners via clip-path — preserves table layout */
+.md-typeset table:not([class]) {
+    clip-path: inset(0 round 10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Header row — sky blue */
+.md-typeset table:not([class]) th {
+    background-color: var(--md-primary-fg-color);
+    color: #fff;
+    border-color: var(--md-primary-fg-color);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* Even rows — soft sky tint */
+.md-typeset table:not([class]) tr:nth-child(even) td {
+    background-color: rgba(14, 165, 233, 0.05);
+}
+
+[data-md-color-scheme="slate"] .md-typeset table:not([class]) tr:nth-child(even) td {
+    background-color: rgba(56, 189, 248, 0.08);
+}
+
+/* ── Inline code ──────────────────────────────────────────────── */
+
+.md-typeset :not(pre) > code {
+    background-color: rgba(14, 165, 233, 0.09);
+    color: #0277BD;
+    border-radius: 4px;
+    padding: 0.06em 0.3em;
+    font-size: 0.88em;
+    font-weight: 500;
+}
+
+[data-md-color-scheme="slate"] .md-typeset :not(pre) > code {
+    background-color: rgba(56, 189, 248, 0.13);
+    color: #81D4FA;
+}
+
+/* ── Code blocks ──────────────────────────────────────────────── */
+
+.md-typeset pre {
+    margin: 1.1em 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+}
+
+/* ── Admonitions ──────────────────────────────────────────────── */
+
+.md-typeset .admonition,
+.md-typeset details {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Content tabs ─────────────────────────────────────────────── */
+
+.md-typeset .tabbed-labels > label {
+    border-radius: 6px 6px 0 0;
+}
+
+.md-typeset .tabbed-content {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .tabbed-content {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.22);
+}
+
+/* ── Search form — pill shape ─────────────────────────────────── */
+
+.md-search__form {
+    border-radius: 2rem;
+}
+
+/* ── TOC sidebar (right) — keeps rounded hover ────────────────── */
+
+.md-sidebar--secondary .md-nav__link {
+    border-radius: 6px;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   GFG-STYLE PRIMARY SIDEBAR
+   Compact items — flat edges — left accent bar
+   ═══════════════════════════════════════════════════════════════ */
+
+.md-sidebar--primary .md-nav__link {
+    border-radius: 0;
+    border-left: 3px solid transparent;
+    padding: 0.32rem 0.6rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+    transition: background 0.15s ease, color 0.15s ease, border-left-color 0.15s ease;
+}
+
+.md-sidebar--primary .md-nav__link:hover:not(.md-nav__link--active) {
+    background: rgba(14, 165, 233, 0.07);
+    border-left-color: rgba(14, 165, 233, 0.38);
+    color: var(--md-primary-fg-color);
+}
+
+.md-sidebar--primary .md-nav__link--active {
+    border-left-color: var(--md-primary-fg-color) !important;
+    background: rgba(14, 165, 233, 0.10) !important;
+    color: var(--md-primary-fg-color) !important;
+    font-weight: 600;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__link--active {
+    background: rgba(56, 189, 248, 0.13) !important;
+}
+
+/* Section labels — small uppercase gray dividers */
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--md-default-fg-color--light);
+    border-left-color: transparent !important;
+    background: transparent !important;
+    padding-top: 0.7rem;
+    padding-bottom: 0.22rem;
+    cursor: default;
+}
+
+.md-sidebar--primary .md-nav__item--section > .md-nav__link:hover {
+    background: transparent !important;
+    border-left-color: transparent !important;
+    color: var(--md-default-fg-color--light) !important;
+}
+
+/* Thin separator between sections */
+.md-sidebar--primary .md-nav__item--section + .md-nav__item--section {
+    border-top: 1px solid var(--md-default-fg-color--lightest);
+    margin-top: 0.35rem;
+    padding-top: 0.15rem;
+}
+
+/* ── Prevent FOUC on initial load ────────────────────────────────
+   Hide tabs list + sidebar for ~70ms so JS can modify them before
+   the first paint. Elements fade in showing the already-correct state.
+   With navigation.instant, this only affects the very first page load.
+   ─────────────────────────────────────────────────────────────── */
+
+@keyframes nav-fade-in {
+    0%, 30% { opacity: 0; }
+    100%    { opacity: 1; }
+}
+
+.md-tabs__list {
+    animation: nav-fade-in 0.22s ease forwards;
+}
+
+.md-sidebar--primary .md-sidebar__inner {
+    animation: nav-fade-in 0.22s ease forwards;
+}
+
+/* ── When inside a language section: sidebar filtering via sub-nav.js ── */
+
+/* When sub-nav is active: hide section labels + inactive sections in sidebar */
+.has-subnav .md-sidebar--primary .md-nav__item--section.is-hidden {
+    display: none;
+}
+
+.has-subnav .md-sidebar--primary .md-nav__item--section > label.md-nav__link,
+.has-subnav .md-sidebar--primary .md-nav__item--section > .md-nav__link {
+    display: none;
+}
+
+/* Remove section separator when only one section is visible */
+.has-subnav .md-sidebar--primary .md-nav__item--section + .md-nav__item--section {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+/* ── Admonition title reset ───────────────────────────────────── */
+
+/* Prevent h3/h4 styles from leaking into admonition titles */
+.md-typeset .admonition > .admonition-title,
+.md-typeset details > summary {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    color: inherit !important;
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    font-size: inherit !important;
+    font-weight: 700 !important;
+    box-shadow: none !important;
+}

@@ -1,0 +1,157 @@
+site_name: UncleDev Docs
+site_description: Tài liệu lập trình thực chiến — từ setup đến production
+site_author: UncleDev
+copyright: Copyright &copy; 2026 UncleDev
+
+theme:
+  name: material
+  font:
+    text: Roboto
+    code: JetBrains Mono
+  icon:
+    logo: material/book-open-page-variant
+    repo: fontawesome/brands/github
+  palette:
+    - scheme: default
+      primary: custom
+      accent: light-blue
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: light-blue
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.tracking
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.code.annotate
+    - content.tabs.link
+  language: vi
+
+nav:
+  - Trang chủ: index.md
+  - Java:
+    - Cài đặt môi trường:
+      - Tổng quan: java/setup/index.md
+      - Cài đặt JDK 21: java/setup/01-install-jdk.md
+      - Cài đặt IDE: java/setup/02-install-ide.md
+      - Terminal cơ bản: java/setup/03-terminal-basics.md
+      - Git và GitHub: java/setup/04-git-github.md
+      - Maven và Hello World: java/setup/05-maven-hello-world.md
+    - Nền tảng Java:
+      - Tổng quan: java/fundamentals/index.md
+      - JVM — Hoạt động thế nào: java/fundamentals/01-jvm-how-it-works.md
+      - Kiểu dữ liệu và Biến: java/fundamentals/02-variables-datatypes.md
+      - Toán tử: java/fundamentals/03-operators.md
+      - Rẽ nhánh — if / else / switch: java/fundamentals/04-control-flow.md
+      - Vòng lặp — for / while / do-while / for-each: java/fundamentals/05-loops.md
+      - Mảng — Array 1D & 2D: java/fundamentals/06-arrays.md
+      - String và StringBuilder: java/fundamentals/07-strings.md
+      - Method và Pass-by-value: java/fundamentals/08-methods.md
+      - OOP — Class và Object: java/fundamentals/09-oop-class-object.md
+      - Encapsulation và Constructor: java/fundamentals/10-encapsulation-constructor.md
+    - Java Nâng cao:
+      - Tổng quan: java/advanced/index.md
+
+plugins:
+  - search
+  - i18n:
+      docs_structure: suffix
+      languages:
+        - locale: vi
+          default: true
+          name: Tiếng Việt
+          build: true
+          nav_translations:
+            Trang chủ: Trang chủ
+            Java: Java
+            Cài đặt môi trường: Cài đặt môi trường
+            Nền tảng Java: Nền tảng Java
+            Java Nâng cao: Java Nâng cao
+            Tổng quan: Tổng quan
+            Cài đặt JDK 21: Cài đặt JDK 21
+            Cài đặt IDE: Cài đặt IDE
+            Terminal cơ bản: Terminal cơ bản
+            Git và GitHub: Git và GitHub
+            Maven và Hello World: Maven và Hello World
+            JVM — Hoạt động thế nào: JVM — Hoạt động thế nào
+            Kiểu dữ liệu và Biến: Kiểu dữ liệu và Biến
+            Toán tử: Toán tử
+            Rẽ nhánh — if / else / switch: Rẽ nhánh — if / else / switch
+            Vòng lặp — for / while / do-while / for-each: Vòng lặp — for / while / do-while / for-each
+            Mảng — Array 1D & 2D: Mảng — Array 1D & 2D
+            String và StringBuilder: String và StringBuilder
+            Method và Pass-by-value: Method và Pass-by-value
+            OOP — Class và Object: OOP — Class và Object
+            Encapsulation và Constructor: Encapsulation và Constructor
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Trang chủ: Home
+            Java: Java
+            Cài đặt môi trường: Environment Setup
+            Nền tảng Java: Java Fundamentals
+            Java Nâng cao: Java Advanced
+            Tổng quan: Overview
+            Cài đặt JDK 21: Install JDK 21
+            Cài đặt IDE: Install IDE
+            Terminal cơ bản: Terminal Basics
+            Git và GitHub: Git and GitHub
+            Maven và Hello World: Maven and Hello World
+            JVM — Hoạt động thế nào: JVM — How it works
+            Kiểu dữ liệu và Biến: Variables & Data Types
+            Toán tử: Operators
+            Rẽ nhánh — if / else / switch: Control Flow — if / else / switch
+            Vòng lặp — for / while / do-while / for-each: Loops — for / while / do-while / for-each
+            Mảng — Array 1D & 2D: Arrays — 1D & 2D
+            String và StringBuilder: String and StringBuilder
+            Method và Pass-by-value: Methods and Pass-by-value
+            OOP — Class và Object: OOP — Class and Object
+            Encapsulation và Constructor: Encapsulation and Constructor
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/lang-switcher.js
+  - assets/javascripts/prev-next-nav.js
+  - assets/javascripts/sub-nav.js
