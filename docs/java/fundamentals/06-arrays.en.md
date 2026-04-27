@@ -194,6 +194,8 @@ System.out.println(grid.length);    // 3 — number of rows
 System.out.println(grid[0].length); // 3 — columns in row 0
 ```
 
+![2D Array Memory Layout](../../assets/diagrams/array-2d-layout.svg)
+
 ### Iterating over a 2D array
 
 === "Nested for"

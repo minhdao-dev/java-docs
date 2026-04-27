@@ -83,6 +83,8 @@ Heap
     └── object sống lâu được promote từ Young Gen
 ```
 
+![Heap Generations](../../assets/diagrams/heap-generations.svg)
+
 !!! tip "Mental model"
     Hãy hình dung Eden như một nhà trẻ. Hầu hết object chết trẻ — một biến trong vòng lặp, một DTO tạm thời.
     Object nào sống sót qua nhiều lần GC được "promote" lên Old Gen,

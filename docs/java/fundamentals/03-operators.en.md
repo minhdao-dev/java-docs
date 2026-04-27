@@ -287,6 +287,8 @@ When an expression contains multiple operators, Java applies precedence rules (h
 | 13 | `? :` | Ternary |
 | 14 (lowest) | `=` `+=` `-=` … | Assignment |
 
+![Operator Precedence](../../assets/diagrams/operator-precedence.svg)
+
 ```java
 // Without parentheses — easy to misread
 int result = 2 + 3 * 4; // 14, not 20 (multiplication first)

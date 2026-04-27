@@ -254,6 +254,8 @@ public class Rectangle {
 }
 ```
 
+![Constructor Chaining](../../assets/diagrams/constructor-chain.svg)
+
 !!! tip "Dùng `this()` để tránh lặp logic khởi tạo"
     Thay vì copy-paste validation/assignment vào từng constructor, hãy để tất cả chạy qua constructor đầy đủ nhất. Khi logic thay đổi chỉ cần sửa một chỗ.
 

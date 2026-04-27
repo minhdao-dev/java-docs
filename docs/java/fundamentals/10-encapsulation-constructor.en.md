@@ -254,6 +254,8 @@ public class Rectangle {
 }
 ```
 
+![Constructor Chaining](../../assets/diagrams/constructor-chain.svg)
+
 !!! tip "Use `this()` to avoid duplicating initialization logic"
     Instead of copy-pasting validation and assignment into every constructor, funnel all of them through the most complete one. When the logic changes, there is only one place to update.
 

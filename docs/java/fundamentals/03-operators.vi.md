@@ -287,6 +287,8 @@ Khi một biểu thức chứa nhiều toán tử, Java áp dụng thứ tự ư
 | 13 | `? :` | Tam phân |
 | 14 (thấp nhất) | `=` `+=` `-=` … | Gán |
 
+![Operator Precedence](../../assets/diagrams/operator-precedence.svg)
+
 ```java
 // Không dùng ngoặc — dễ nhầm
 int result = 2 + 3 * 4; // 14, không phải 20 (nhân trước)

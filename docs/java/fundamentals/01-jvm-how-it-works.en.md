@@ -87,6 +87,8 @@ Heap
     └── long-lived objects promoted from Young Gen
 ```
 
+![Heap Generations](../../assets/diagrams/heap-generations.svg)
+
 !!! tip "Mental model"
     Think of Eden as a nursery. Most objects die young — a loop variable, a temporary DTO.
     Objects that survive multiple garbage collections get "promoted" to Old Gen,
