@@ -1,9 +1,8 @@
-site_name: UncleDev Docs
+site_name: NMD Docs
 site_url: https://minhdao-dev.github.io/java-docs/
-repo_url: https://github.com/minhdao-dev/java-docs
-site_description: Tài liệu lập trình thực chiến — từ setup đến production
-site_author: UncleDev
-copyright: Copyright &copy; 2026 UncleDev
+site_description: Tài liệu học lập trình Java Backend
+site_author: NMD
+copyright: Copyright &copy; 2026 NMD
 
 theme:
   name: material
@@ -12,7 +11,6 @@ theme:
     code: JetBrains Mono
   icon:
     logo: material/book-open-page-variant
-    repo: fontawesome/brands/github
   palette:
     - scheme: default
       primary: custom
@@ -64,8 +62,6 @@ nav:
       - Method và Pass-by-value: java/fundamentals/08-methods.md
       - OOP — Class và Object: java/fundamentals/09-oop-class-object.md
       - Encapsulation và Constructor: java/fundamentals/10-encapsulation-constructor.md
-    - Java Nâng cao:
-      - Tổng quan: java/advanced/index.md
 
 plugins:
   - search
@@ -147,6 +143,15 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/minhdao-dev
+      name: GitHub
+    - icon: fontawesome/solid/envelope
+      link: mailto:daonguyenminh.it@gmail.com
+      name: Email
 
 extra_css:
   - assets/stylesheets/extra.css

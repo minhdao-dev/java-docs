@@ -28,7 +28,8 @@
       "Bash(echo \"PID: $!\")",
       "Bash(curl -s http://127.0.0.1:8000)",
       "Bash(python -m mkdocs build --no-directory-urls -q)",
-      "Bash(netstat -ano)"
+      "Bash(netstat -ano)",
+      "Bash(python -m mkdocs build --quiet)"
     ]
   }
 }

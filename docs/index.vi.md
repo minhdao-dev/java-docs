@@ -1,40 +1,33 @@
-# UncleDev Docs
-
-Tài liệu lập trình thực chiến — từ setup đến production.
-
-## Ngôn ngữ & Lộ trình
-
-| Ngôn ngữ | Nội dung | Trạng thái |
-|----------|----------|------------|
-| **Java** | Backend từ nền tảng đến mid-level | 🔄 Đang cập nhật |
-| Python | Scripting, Data, Web | ⬜ Sắp có |
+# NMD Docs
 
 ## Java — Tổng quan lộ trình
 
-| Phase | Nội dung | Tiến độ | Trạng thái |
-|-------|----------|---------|------------|
-| Phase 00 | Cài đặt môi trường | 5/5 bài | ✅ Hoàn thành |
-| Phase 01 | Nền tảng Java | 10/16 bài | 🔄 Đang cập nhật |
-| Phase 02 | Java Nâng cao | 0 bài | ⬜ Sắp có |
-| Phase 03–10 | Build Tools → Microservices → DSA | — | ⬜ Sắp có |
+| Nội dung | Tiến độ | Trạng thái |
+|----------|---------|------------|
+| [Cài đặt môi trường](java/setup/index.md) | 5/5 bài | ✅ Hoàn thành |
+| [Nền tảng Java](java/fundamentals/index.md) | 10 bài | 🔄 Đang cập nhật |
 
-## Phase 01 — Nền tảng Java
+## Cài đặt môi trường
 
 | # | Bài học | Trạng thái |
 |---|---------|------------|
-| 01 | JVM — Hoạt động thế nào | ✅ |
-| 02 | Kiểu dữ liệu và Biến | ✅ |
-| 03 | Toán tử | ✅ |
-| 04 | Rẽ nhánh — if / else / switch | ✅ |
-| 05 | Vòng lặp — for / while / do-while | ✅ |
-| 06 | Mảng — Array 1D & 2D | ✅ |
-| 07 | String và StringBuilder | ✅ |
-| 08 | Method và Pass-by-value | ✅ |
-| 09 | OOP — Class và Object | ✅ |
-| 10 | Encapsulation và Constructor | ✅ |
-| 11 | Kế thừa (Inheritance) | ⬜ |
-| 12 | Đa hình (Polymorphism) | ⬜ |
-| 13 | Abstract class | ⬜ |
-| 14 | Interface | ⬜ |
-| 15 | instanceof và Type Casting | ⬜ |
-| — | Project: Student Grade Manager | ⬜ |
+| 01 | [Cài đặt JDK 21](java/setup/01-install-jdk.md) | ✅ |
+| 02 | [Cài đặt IDE](java/setup/02-install-ide.md) | ✅ |
+| 03 | [Terminal cơ bản](java/setup/03-terminal-basics.md) | ✅ |
+| 04 | [Git và GitHub](java/setup/04-git-github.md) | ✅ |
+| 05 | [Maven và Hello World](java/setup/05-maven-hello-world.md) | ✅ |
+
+## Nền tảng Java
+
+| # | Bài học | Trạng thái |
+|---|---------|------------|
+| 01 | [JVM — Hoạt động thế nào](java/fundamentals/01-jvm-how-it-works.md) | ✅ |
+| 02 | [Kiểu dữ liệu và Biến](java/fundamentals/02-variables-datatypes.md) | ✅ |
+| 03 | [Toán tử](java/fundamentals/03-operators.md) | ✅ |
+| 04 | [Rẽ nhánh — if / else / switch](java/fundamentals/04-control-flow.md) | ✅ |
+| 05 | [Vòng lặp — for / while / do-while](java/fundamentals/05-loops.md) | ✅ |
+| 06 | [Mảng — Array 1D & 2D](java/fundamentals/06-arrays.md) | ✅ |
+| 07 | [String và StringBuilder](java/fundamentals/07-strings.md) | ✅ |
+| 08 | [Method và Pass-by-value](java/fundamentals/08-methods.md) | ✅ |
+| 09 | [OOP — Class và Object](java/fundamentals/09-oop-class-object.md) | ✅ |
+| 10 | [Encapsulation và Constructor](java/fundamentals/10-encapsulation-constructor.md) | ✅ |
