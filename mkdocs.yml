@@ -1,4 +1,6 @@
 site_name: UncleDev Docs
+site_url: https://minhdao-dev.github.io/java-docs/
+repo_url: https://github.com/minhdao-dev/java-docs
 site_description: Tài liệu lập trình thực chiến — từ setup đến production
 site_author: UncleDev
 copyright: Copyright &copy; 2026 UncleDev
