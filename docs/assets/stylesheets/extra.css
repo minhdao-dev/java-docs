@@ -1,3 +1,17 @@
+/* ── Cross-document View Transitions (Chrome 126+, Safari 18+) ──
+   Smooth fade between pages without navigation.instant.
+   Falls back to instant page load on unsupported browsers.      */
+
+@view-transition {
+    navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 0.18s;
+    animation-timing-function: ease;
+}
+
 /* ── Language switcher ────────────────────────────────────────── */
 
 .md-header__option .md-select {
