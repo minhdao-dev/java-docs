@@ -1,0 +1,25 @@
+
+ \u2502  \u26a0  Warning from the Material for MkDocs team
+ \u2502
+ \u2502  MkDocs 2.0, the underlying framework of Material for MkDocs,
+ \u2502  will introduce backward-incompatible changes, including:
+ \u2502
+ \u2502  × All plugins will stop working – the plugin system has been removed
+ \u2502  × All theme overrides will break – the theming system has been rewritten
+ \u2502  × No migration path exists – existing projects cannot be upgraded
+ \u2502  × Closed contribution model – community members can't report bugs
+ \u2502  × Currently unlicensed – unsuitable for production use
+ \u2502
+ \u2502  Our full analysis:
+ \u2502
+ \u2502  https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/
+
+INFO    -  Building documentation...
+INFO    -  mkdocs_static_i18n: Building 'vi' documentation to directory: C:\Users\nguye\AppData\Local\Temp\mkdocs_jstn6jhj
+INFO    -  mkdocs_static_i18n: Adding 'en' to the 'material/search' plugin 'lang' option
+INFO    -  Cleaning site directory
+INFO    -  mkdocs_static_i18n: Translated 23 navigation elements to 'vi'
+INFO    -  mkdocs_static_i18n: Building 'en' documentation to directory: C:\Users\nguye\AppData\Local\Temp\mkdocs_jstn6jhj\en
+INFO    -  mkdocs_static_i18n: Translated 23 navigation elements to 'en'
+INFO    -  Documentation built in 2.41 seconds
+INFO    -  [09:24:38] Serving on http://127.0.0.1:8000/

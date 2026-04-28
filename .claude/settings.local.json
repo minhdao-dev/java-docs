@@ -17,7 +17,18 @@
       "Bash(sed -i 's|\\\\*\\\\*\\\\[Phase 01 — Nền tảng Java\\\\]|\\\\*\\\\*\\\\[Nền tảng Java\\\\]|g' docs/java/setup/05-maven-hello-world.vi.md)",
       "Bash(sed -i 's|## 10. Phase 00 complete|## 10. Setup complete|g' docs/java/setup/05-maven-hello-world.en.md)",
       "Bash(sed -i 's|you have completed Phase 00!|you have completed the Environment Setup section!|g' docs/java/setup/05-maven-hello-world.en.md)",
-      "Bash(sed -i 's|\\\\*\\\\*\\\\[Phase 01 — Java Fundamentals\\\\]|\\\\*\\\\*\\\\[Java Fundamentals\\\\]|g' docs/java/setup/05-maven-hello-world.en.md)"
+      "Bash(sed -i 's|\\\\*\\\\*\\\\[Phase 01 — Java Fundamentals\\\\]|\\\\*\\\\*\\\\[Java Fundamentals\\\\]|g' docs/java/setup/05-maven-hello-world.en.md)",
+      "Bash(grep -n \"14 \\(th\\\\|thấp nh\\\\|\\\\`=\\\\` \\\\`+=\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(python -m mkdocs serve --no-livereload -q)",
+      "WebFetch(domain:127.0.0.1)",
+      "Bash(python -m mkdocs serve --no-livereload --dev-addr 127.0.0.1:8000)",
+      "Bash(echo \"PID: $!\")",
+      "Bash(curl -s http://127.0.0.1:8000)",
+      "Bash(python -m mkdocs build --no-directory-urls -q)",
+      "Bash(netstat -ano)"
     ]
   }
 }

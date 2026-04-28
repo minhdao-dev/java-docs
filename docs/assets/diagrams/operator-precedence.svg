@@ -1,71 +1,92 @@
-<svg width="100%" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" role="img">
+<svg width="100%" viewBox="0 0 680 590" xmlns="http://www.w3.org/2000/svg" role="img">
   <title>Java Operator Precedence</title>
   <desc>Visual hierarchy of Java operator precedence from highest to lowest, grouped by category</desc>
 
   <!-- Title -->
-  <text x="340" y="26" font-family="ui-sans-serif,sans-serif" font-size="14"
+  <text x="340" y="26" font-family="ui-sans-serif,sans-serif" font-size="16"
     font-weight="700" fill="#0284C7" text-anchor="middle">Operator Precedence — Highest → Lowest</text>
 
-  <!-- Helper: each row is a tier. Tiers get wider and lighter as precedence decreases -->
+  <!-- Each tier: category label (line 1) + operators (line 2), 52px tall, pyramid shape -->
 
-  <!-- Tier 1 — Postfix (highest) -->
-  <rect x="220" y="38" width="240" height="32" rx="6" fill="#0284C7"/>
-  <text x="340" y="59" font-family="ui-monospace,monospace" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">expr++  expr--</text>
-  <text x="480" y="59" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Postfix</text>
+  <!-- Tier 1 — Postfix (highest) x=230 w=220 y=38 -->
+  <rect x="230" y="38" width="220" height="52" rx="6" fill="#1D4ED8"/>
+  <text x="340" y="56" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="rgba(255,255,255,0.85)" text-anchor="middle">Postfix</text>
+  <text x="340" y="78" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#fff" text-anchor="middle">expr++  expr--</text>
 
-  <!-- Tier 2 — Prefix / Unary -->
-  <rect x="190" y="76" width="300" height="32" rx="6" fill="#0369A1"/>
-  <text x="340" y="97" font-family="ui-monospace,monospace" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">++expr  --expr  +expr  -expr  ~  !</text>
-  <text x="500" y="97" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Prefix / Unary</text>
+  <!-- Tier 2 — Prefix / Unary x=186 w=308 y=92 -->
+  <rect x="186" y="92" width="308" height="52" rx="6" fill="#0284C7"/>
+  <text x="340" y="110" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="rgba(255,255,255,0.85)" text-anchor="middle">Prefix / Unary</text>
+  <text x="340" y="132" font-family="ui-monospace,monospace" font-size="13"
+    font-weight="700" fill="#fff" text-anchor="middle">++expr  --expr  +expr  -expr  ~  !</text>
 
-  <!-- Tier 3 — Multiplicative -->
-  <rect x="160" y="114" width="360" height="32" rx="6" fill="#0EA5E9"/>
-  <text x="340" y="135" font-family="ui-monospace,monospace" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">*   /   %</text>
-  <text x="530" y="135" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Multiplicative</text>
+  <!-- Tier 3 — Multiplicative x=148 w=384 y=146 -->
+  <rect x="148" y="146" width="384" height="52" rx="6" fill="#0EA5E9"/>
+  <text x="340" y="164" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="rgba(255,255,255,0.85)" text-anchor="middle">Multiplicative</text>
+  <text x="340" y="186" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#fff" text-anchor="middle">*   /   %</text>
 
-  <!-- Tier 4 — Additive -->
-  <rect x="130" y="152" width="420" height="32" rx="6" fill="#38BDF8"/>
-  <text x="340" y="173" font-family="ui-monospace,monospace" font-size="12" fill="#075985" text-anchor="middle" font-weight="600">+   -</text>
-  <text x="560" y="173" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Additive</text>
+  <!-- Tier 4 — Additive x=110 w=460 y=200 -->
+  <rect x="110" y="200" width="460" height="52" rx="6" fill="#38BDF8"/>
+  <text x="340" y="218" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#075985" text-anchor="middle">Additive</text>
+  <text x="340" y="240" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#075985" text-anchor="middle">+   -</text>
 
-  <!-- Tier 5 — Shift -->
-  <rect x="100" y="190" width="480" height="32" rx="6" fill="#7DD3FC"/>
-  <text x="340" y="211" font-family="ui-monospace,monospace" font-size="12" fill="#075985" text-anchor="middle" font-weight="600">&lt;&lt;   &gt;&gt;   &gt;&gt;&gt;</text>
-  <text x="590" y="211" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Shift</text>
+  <!-- Tier 5 — Shift x=76 w=528 y=254 -->
+  <rect x="76" y="254" width="528" height="52" rx="6" fill="#7DD3FC"/>
+  <text x="340" y="272" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#0C4A6E" text-anchor="middle">Shift</text>
+  <text x="340" y="294" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#0C4A6E" text-anchor="middle">&lt;&lt;   &gt;&gt;   &gt;&gt;&gt;</text>
 
-  <!-- Tier 6 — Relational -->
-  <rect x="70" y="228" width="540" height="32" rx="6" fill="#BAE6FD"/>
-  <text x="340" y="249" font-family="ui-monospace,monospace" font-size="12" fill="#0369A1" text-anchor="middle" font-weight="600">&lt;   &gt;   &lt;=   &gt;=   instanceof</text>
-  <text x="620" y="249" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Relational</text>
+  <!-- Tier 6 — Relational x=46 w=588 y=308 -->
+  <rect x="46" y="308" width="588" height="52" rx="6" fill="#BAE6FD"/>
+  <text x="340" y="326" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#0369A1" text-anchor="middle">Relational</text>
+  <text x="340" y="348" font-family="ui-monospace,monospace" font-size="14"
+    font-weight="700" fill="#0369A1" text-anchor="middle">&lt;   &gt;   &lt;=   &gt;=   instanceof</text>
 
-  <!-- Tier 7 — Equality -->
-  <rect x="50" y="266" width="580" height="32" rx="6" fill="#E0F2FE"/>
-  <text x="340" y="287" font-family="ui-monospace,monospace" font-size="12" fill="#0369A1" text-anchor="middle" font-weight="600">==   !=</text>
-  <text x="640" y="287" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Equality</text>
+  <!-- Tier 7 — Equality x=28 w=624 y=362 -->
+  <rect x="28" y="362" width="624" height="52" rx="6" fill="#DBEAFE"/>
+  <text x="340" y="380" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#1E40AF" text-anchor="middle">Equality</text>
+  <text x="340" y="402" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#1E40AF" text-anchor="middle">==   !=</text>
 
-  <!-- Tier 8-10 — Bitwise (grouped) -->
-  <rect x="30" y="304" width="620" height="32" rx="6" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1"/>
-  <text x="340" y="325" font-family="ui-monospace,monospace" font-size="12" fill="#475569" text-anchor="middle" font-weight="600">&amp;   ^   |</text>
-  <text x="660" y="325" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Bitwise</text>
+  <!-- Tier 8 — Bitwise x=16 w=648 y=416 -->
+  <rect x="16" y="416" width="648" height="52" rx="6"
+    fill="#EFF6FF" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="340" y="434" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#4B5563" text-anchor="middle">Bitwise  (&amp; → ^ → |)</text>
+  <text x="340" y="456" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#374151" text-anchor="middle">&amp;   ^   |</text>
 
-  <!-- Tier 11-12 — Logical -->
-  <rect x="18" y="342" width="644" height="32" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-  <text x="340" y="363" font-family="ui-monospace,monospace" font-size="12" fill="#475569" text-anchor="middle" font-weight="600">&amp;&amp;   ||</text>
-  <text x="672" y="363" font-family="ui-sans-serif,sans-serif" font-size="10" fill="#64748b">Logical</text>
+  <!-- Tier 9 — Logical x=10 w=660 y=470 -->
+  <rect x="10" y="470" width="660" height="52" rx="6"
+    fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="340" y="488" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#4B5563" text-anchor="middle">Logical  (&amp;&amp; before ||)</text>
+  <text x="340" y="510" font-family="ui-monospace,monospace" font-size="15"
+    font-weight="700" fill="#374151" text-anchor="middle">&amp;&amp;   ||</text>
 
-  <!-- Tier 13-14 — Ternary + Assignment (lowest) -->
-  <rect x="10" y="380" width="660" height="32" rx="6" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-  <text x="340" y="401" font-family="ui-monospace,monospace" font-size="12" fill="#64748b" text-anchor="middle" font-weight="600">? :     =   +=   -=   *=   /=   …</text>
+  <!-- Tier 10 — Ternary + Assignment (lowest) x=6 w=668 y=524 -->
+  <rect x="6" y="524" width="668" height="52" rx="6"
+    fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.2"/>
+  <text x="340" y="542" font-family="ui-sans-serif,sans-serif" font-size="12"
+    fill="#64748B" text-anchor="middle">Ternary + Assignment  (lowest)</text>
+  <text x="340" y="564" font-family="ui-monospace,monospace" font-size="14"
+    font-weight="700" fill="#64748B" text-anchor="middle">? :     =   +=   -=   *=   /=   &amp;=   …</text>
 
-  <!-- Highest label -->
-  <text x="8" y="59" font-family="ui-sans-serif,sans-serif" font-size="10"
-    fill="#0284C7" font-weight="700" text-anchor="middle">▲</text>
-  <text x="8" y="72" font-family="ui-sans-serif,sans-serif" font-size="9"
-    fill="#0284C7" text-anchor="middle">HIGH</text>
-
-  <!-- Lowest label -->
-  <text x="8" y="396" font-family="ui-sans-serif,sans-serif" font-size="10"
-    fill="#94a3b8" font-weight="700" text-anchor="middle">▼</text>
-  <text x="8" y="409" font-family="ui-sans-serif,sans-serif" font-size="9"
-    fill="#94a3b8" text-anchor="middle">LOW</text>
+  <!-- HIGH / LOW side labels                                -->
+  <!-- "▲ HIGH" must end BEFORE tier-1 rect starts at x=230  -->
+  <!-- text-anchor="end" at x=224 → text sits fully left of pyramid -->
+  <text x="224" y="65" font-family="ui-sans-serif,sans-serif" font-size="11"
+    fill="#1D4ED8" font-weight="700" text-anchor="end">&#x25B2; HIGH</text>
+  <!-- "▼ LOW" sits in the far-left whitespace below tier-10  -->
+  <text x="6" y="572" font-family="ui-sans-serif,sans-serif" font-size="11"
+    fill="#94a3b8" font-weight="700">&#x25BC; LOW</text>
 </svg>
