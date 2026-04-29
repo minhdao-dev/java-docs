@@ -317,17 +317,18 @@ Lợi ích của immutability:
 
 ## 8. Code ví dụ
 
-```java title="UserAccount.java" linenums="1"
+```java
 import java.util.Objects;
 
 public final class UserAccount {
 
-    private final String username;  // (1)!
+    private final String username;  // final: gán một lần trong constructor — identity không thể thay đổi
     private String       email;
     private int          loginCount;
     private boolean      active;
 
-    public UserAccount(String username, String email) { // (2)!
+    // không có no-arg constructor — mọi UserAccount cần username + email hợp lệ ngay từ đầu
+    public UserAccount(String username, String email) {
         this.username   = validateUsername(username);
         this.email      = validateEmail(email);
         this.loginCount = 0;
@@ -357,7 +358,7 @@ public final class UserAccount {
 
     // Setter với validation
     public void setEmail(String email) {
-        this.email = validateEmail(email); // (3)!
+        this.email = validateEmail(email); // tái sử dụng validation — chỉ một chỗ cần sửa khi đổi rule
     }
 
     // Behavior method — thay đổi state theo logic nghiệp vụ
@@ -380,7 +381,7 @@ public final class UserAccount {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof UserAccount u)) return false;
-        return username.equals(u.username); // (4)!
+        return username.equals(u.username); // bằng nhau theo username, không phải email hay loginCount
     }
 
     @Override
@@ -407,11 +408,6 @@ public final class UserAccount {
     }
 }
 ```
-
-1. `final` field — phải gán trong constructor, không thể thay đổi sau đó. `username` là identity của account, không bao giờ được phép đổi.
-2. Constructor duy nhất — không có no-arg constructor. Mọi `UserAccount` phải có `username` và `email` hợp lệ ngay từ đầu. Không thể tạo object ở trạng thái nửa vời.
-3. `setEmail` tái sử dụng `validateEmail` — validation logic không bị lặp. Thay đổi rule validate chỉ cần sửa một chỗ.
-4. Identity của `UserAccount` dựa trên `username`, không phải email hay loginCount — hai account cùng username là một người dùng, dù email khác.
 
 ---
 

@@ -1,4 +1,4 @@
-# Arrays — 1D & 2D
+﻿# Arrays — 1D & 2D
 
 ## 1. What is it
 
@@ -306,7 +306,7 @@ System.out.println(Arrays.deepToString(x));    // [[1, 2], [3, 4]]
 
 ## 9. Code example
 
-```java title="ArraysDemo.java" linenums="1"
+```java linenums="1"
 import java.util.Arrays;
 
 public class ArraysDemo {

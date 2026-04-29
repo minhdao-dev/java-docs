@@ -1,4 +1,4 @@
-# Vòng lặp — for / while / do-while / for-each
+﻿# Vòng lặp — for / while / do-while / for-each
 
 ## 1. Khái niệm
 
@@ -368,7 +368,7 @@ for (int i = 1; i <= 5; i++) {
 
 ## 10. Code ví dụ
 
-```java title="LoopsDemo.java" linenums="1"
+```java linenums="1"
 import java.util.ArrayList;
 import java.util.List;
 

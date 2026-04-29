@@ -1,4 +1,4 @@
-# Rẽ nhánh — if / else / switch
+﻿# Rẽ nhánh — if / else / switch
 
 ## 1. Khái niệm
 
@@ -273,7 +273,7 @@ static String handleNull(String s) {
 
 ## 7. Code ví dụ
 
-```java title="ControlFlowDemo.java" linenums="1"
+```java linenums="1"
 public class ControlFlowDemo {
 
     // Early return — phân loại điểm

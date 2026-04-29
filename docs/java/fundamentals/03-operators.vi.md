@@ -1,4 +1,4 @@
-# Toán tử (Operators)
+﻿# Toán tử (Operators)
 
 ## 1. Khái niệm
 
@@ -304,7 +304,7 @@ int result = (2 + 3) * 4; // 20
 
 ## 11. Code ví dụ
 
-```java title="OperatorsDemo.java" linenums="1"
+```java linenums="1"
 public class OperatorsDemo {
 
     public static void main(String[] args) {

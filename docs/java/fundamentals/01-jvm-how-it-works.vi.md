@@ -1,4 +1,4 @@
-# JVM — Hoạt động thế nào
+﻿# JVM — Hoạt động thế nào
 
 ## 1. Định nghĩa
 
@@ -228,7 +228,7 @@ s = null;                        // reference bị bỏ
 
 Code dưới đây minh họa cái gì sống trên Stack vs Heap:
 
-```java title="JvmMemoryDemo.java" linenums="1"
+```java linenums="1"
 public class JvmMemoryDemo {
 
     // Static field — sống trong Method Area (Metaspace)

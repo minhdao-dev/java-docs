@@ -1,4 +1,4 @@
-# String and StringBuilder
+﻿# String and StringBuilder
 
 ## 1. What is it
 
@@ -225,7 +225,7 @@ System.out.println(sb.toString());  // "Hello, World"
 
 ## 8. Code example
 
-```java title="StringDemo.java" linenums="1"
+```java linenums="1"
 public class StringDemo {
 
     static boolean isPalindrome(String s) {

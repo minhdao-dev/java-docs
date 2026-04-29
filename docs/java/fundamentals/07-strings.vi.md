@@ -1,4 +1,4 @@
-# String và StringBuilder
+﻿# String và StringBuilder
 
 ## 1. Khái niệm
 
@@ -225,7 +225,7 @@ System.out.println(sb.toString()); // "Hello, World"
 
 ## 8. Code ví dụ
 
-```java title="StringDemo.java" linenums="1"
+```java linenums="1"
 public class StringDemo {
 
     static boolean isPalindrome(String s) {

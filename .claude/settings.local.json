@@ -29,7 +29,22 @@
       "Bash(curl -s http://127.0.0.1:8000)",
       "Bash(python -m mkdocs build --no-directory-urls -q)",
       "Bash(netstat -ano)",
-      "Bash(python -m mkdocs build --quiet)"
+      "Bash(python -m mkdocs build --quiet)",
+      "Bash(pip index *)",
+      "Bash(pip --version)",
+      "Bash(python *)",
+      "Bash(pip uninstall *)",
+      "Bash(git checkout *)",
+      "Bash(mermaid\" docs/java/fundamentals/ docs/java/setup/ 2>/dev/null | grep -v index)",
+      "Bash(grep -rl \"```mermaid\" docs/java/fundamentals/ docs/java/setup/ 2>/dev/null | grep -v index)",
+      "Bash(curl -s \"https://redis.io/docs/latest/develop/get-started/\")",
+      "Bash(curl -s \"https://redis.io/docs/latest/scss/style.min.ffd35a3be9b20fcc50a3caf3964670dfd229adc7a66c976768747546ae98a824.css\")",
+      "Read(//tmp/**)",
+      "Bash(perl -ne 'while\\(/\\(@media[^{]*\\\\{[^}]*\\\\}\\)/g\\) {print \"$1\\\\n\"}')",
+      "Bash(perl -ne 'while \\(/\\(@media.*?\\\\{[^{]*?\\\\.md:\\\\\\\\w+[^}]*\\\\}\\)/sg\\) { print \"$1\\\\n\"; }')",
+      "Bash(grep '^\\\\`\\\\`\\\\`')",
+      "Bash(grep -rn '```.*title=' docs/java/ --include=\"*.md\")",
+      "Bash(grep *)"
     ]
   }
 }

@@ -1,21 +1,21 @@
-# Method và Pass-by-value
+﻿# Method và Pass-by-value
 
 ## 1. Khái niệm
 
 **Method** là một khối code được đặt tên, đóng gói một tác vụ cụ thể và có thể tái sử dụng nhiều lần.
 
-```java title="Anatomy of a method"
-public static int add(int a, int b) { // (1)!
-    return a + b; // (2)!
+```java
+public static int add(int a, int b) {
+    return a + b;
 }
 ```
 
-1.  - **`public`** — phạm vi truy cập (access modifier)
-    - **`static`** — gắn với class, gọi không cần tạo object
-    - **`int`** — kiểu trả về (return type)
-    - **`add`** — tên method (camelCase)
-    - **`(int a, int b)`** — danh sách tham số (kiểu + tên mỗi cặp)
-2.  Thân method — `return` gửi kết quả về nơi gọi.
+- **`public`** — phạm vi truy cập (access modifier)
+- **`static`** — gắn với class, gọi không cần tạo object
+- **`int`** — kiểu trả về (return type)
+- **`add`** — tên method (camelCase)
+- **`(int a, int b)`** — danh sách tham số (kiểu + tên mỗi cặp)
+- Thân method: `return` gửi kết quả về nơi gọi.
 
 Gọi method:
 
@@ -283,7 +283,7 @@ static int sumDigits(int n) {
 
 ## 9. Code ví dụ
 
-```java title="MethodsDemo.java" linenums="1"
+```java linenums="1"
 import java.util.Arrays;
 
 public class MethodsDemo {

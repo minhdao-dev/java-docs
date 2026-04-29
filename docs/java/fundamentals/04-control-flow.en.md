@@ -1,4 +1,4 @@
-# Control Flow — if / else / switch
+﻿# Control Flow — if / else / switch
 
 ## 1. What is it
 
@@ -273,7 +273,7 @@ static String handleNull(String s) {
 
 ## 7. Code example
 
-```java title="ControlFlowDemo.java" linenums="1"
+```java linenums="1"
 public class ControlFlowDemo {
 
     // Early return — grade classification

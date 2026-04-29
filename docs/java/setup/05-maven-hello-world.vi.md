@@ -1,4 +1,4 @@
-# Maven và Hello World
+﻿# Maven và Hello World
 
 ## 1. Maven là gì
 
@@ -185,7 +185,7 @@ cd hello-world
 
 Mở (hoặc tạo mới) file `App.java` trong `src/main/java/com/example/`:
 
-```java title="src/main/java/com/example/App.java"
+```java
 package com.example;
 
 public class App {

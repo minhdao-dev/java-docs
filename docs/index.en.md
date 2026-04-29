@@ -1,33 +1,109 @@
 # NMD Docs
 
-## Java — Roadmap Overview
+Java Backend documentation — from JVM to Microservices.
 
-| Content | Progress | Status |
-|---------|----------|--------|
-| [Environment Setup](java/setup/index.md) | 5/5 lessons | ✅ Complete |
-| [Java Fundamentals](java/fundamentals/index.md) | 10 lessons | 🔄 In progress |
+<div class="homepage-stats">
+  <span>Java 21</span>
+  <span>Spring Boot</span>
+  <span>PostgreSQL</span>
+  <span>Redis</span>
+  <span>Docker</span>
+  <span>Kafka</span>
+  <span>Microservices</span>
+</div>
 
-## Environment Setup
+[Get started :octicons-arrow-right-24:](java/setup/index.md){ .md-button .btn-start }
 
-| # | Lesson | Status |
-|---|--------|--------|
-| 01 | [Install JDK 21](java/setup/01-install-jdk.md) | ✅ |
-| 02 | [Install IDE](java/setup/02-install-ide.md) | ✅ |
-| 03 | [Terminal Basics](java/setup/03-terminal-basics.md) | ✅ |
-| 04 | [Git and GitHub](java/setup/04-git-github.md) | ✅ |
-| 05 | [Maven and Hello World](java/setup/05-maven-hello-world.md) | ✅ |
+---
 
-## Java Fundamentals
+<div class="roadmap">
 
-| # | Lesson | Status |
-|---|--------|--------|
-| 01 | [JVM — How it works](java/fundamentals/01-jvm-how-it-works.md) | ✅ |
-| 02 | [Variables & Data Types](java/fundamentals/02-variables-datatypes.md) | ✅ |
-| 03 | [Operators](java/fundamentals/03-operators.md) | ✅ |
-| 04 | [Control Flow — if / else / switch](java/fundamentals/04-control-flow.md) | ✅ |
-| 05 | [Loops — for / while / do-while](java/fundamentals/05-loops.md) | ✅ |
-| 06 | [Arrays — 1D & 2D](java/fundamentals/06-arrays.md) | ✅ |
-| 07 | [String and StringBuilder](java/fundamentals/07-strings.md) | ✅ |
-| 08 | [Methods and Pass-by-value](java/fundamentals/08-methods.md) | ✅ |
-| 09 | [OOP — Class and Object](java/fundamentals/09-oop-class-object.md) | ✅ |
-| 10 | [Encapsulation and Constructor](java/fundamentals/10-encapsulation-constructor.md) | ✅ |
+<a class="rm-node rm-done" href="java/setup/">
+  <div class="rm-phase-num">00</div>
+  <div class="rm-info">
+    <div class="rm-title">Setup &amp; Mindset</div>
+    <div class="rm-meta">5/5 lessons · <span class="rm-badge rm-badge--done">✓ Complete</span></div>
+  </div>
+</a>
+
+<a class="rm-node rm-active" href="java/fundamentals/">
+  <div class="rm-phase-num">01</div>
+  <div class="rm-info">
+    <div class="rm-title">Java Fundamentals</div>
+    <div class="rm-meta">13/16 lessons · <span class="rm-badge rm-badge--active">▶ In progress</span></div>
+  </div>
+</a>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">02</div>
+  <div class="rm-info">
+    <div class="rm-title">Java Core Advanced</div>
+    <div class="rm-meta">Collections, Generics, Lambda, Stream API, Concurrency · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">03</div>
+  <div class="rm-info">
+    <div class="rm-title">Build Tools &amp; Testing</div>
+    <div class="rm-meta">Maven, JUnit 5, Mockito, TDD · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">04</div>
+  <div class="rm-info">
+    <div class="rm-title">SQL &amp; Databases</div>
+    <div class="rm-meta">PostgreSQL, JDBC, Transaction, Query optimization · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">05</div>
+  <div class="rm-info">
+    <div class="rm-title">Spring Boot Core</div>
+    <div class="rm-meta">REST API, Spring Data JPA, Validation, Actuator · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">06</div>
+  <div class="rm-info">
+    <div class="rm-title">Spring Security &amp; JWT</div>
+    <div class="rm-meta">Authentication, Authorization, JWT, OAuth2 · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">07</div>
+  <div class="rm-info">
+    <div class="rm-title">Redis &amp; Caching</div>
+    <div class="rm-meta">Redis data structures, Caching strategies, Session · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">08</div>
+  <div class="rm-info">
+    <div class="rm-title">Docker &amp; CI/CD</div>
+    <div class="rm-meta">Docker, Docker Compose, GitHub Actions · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">09</div>
+  <div class="rm-info">
+    <div class="rm-title">Microservices &amp; Kafka</div>
+    <div class="rm-meta">Microservices, API Gateway, Kafka, Service discovery · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+<div class="rm-node rm-soon">
+  <div class="rm-phase-num">10</div>
+  <div class="rm-info">
+    <div class="rm-title">DSA &amp; Interview Prep</div>
+    <div class="rm-meta">Data Structures, Algorithms, System Design, Mock interviews · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+  </div>
+</div>
+
+</div>

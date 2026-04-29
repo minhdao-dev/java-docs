@@ -2,24 +2,24 @@
 
 Installation and configuration guide for a Java development environment on Windows, macOS, and Linux: JDK 21, IDE, Git, and Maven.
 
-## Lessons
+## Articles
 
-| # | Lesson | Content | Status |
-|---|--------|---------|--------|
-| 01 | [Install JDK 21](01-install-jdk.md) | Windows / macOS / Linux | ✅ Done |
-| 02 | [Install IDE](02-install-ide.md) | IntelliJ IDEA / Eclipse / VS Code | ✅ Done |
-| 03 | [Terminal Basics](03-terminal-basics.md) | Essential commands, running Java from CLI | ✅ Done |
-| 04 | [Git and GitHub](04-git-github.md) | Version control, creating your first repo | ✅ Done |
-| 05 | [Maven and Hello World](05-maven-hello-world.md) | Project structure, your first program | ✅ Done |
+| # | Lesson | Content |
+|---|--------|---------|
+| 01 | [Install JDK 21](01-install-jdk.md) | Windows / macOS / Linux |
+| 02 | [Install IDE](02-install-ide.md) | IntelliJ IDEA / Eclipse / VS Code |
+| 03 | [Terminal Basics](03-terminal-basics.md) | Essential commands, running Java from CLI |
+| 04 | [Git and GitHub](04-git-github.md) | Version control, creating your first repo |
+| 05 | [Maven and Hello World](05-maven-hello-world.md) | Project structure, your first program |
 
-## Outcomes
+## Checkpoint
 
-After completing this section, you will be able to:
+You're ready to move on when you can:
 
-- Type `java -version` and see JDK 21
-- Write and run a Java program from both an IDE and the terminal
-- Commit and push code to GitHub
-- Understand the directory structure of a standard Java Maven project
+- [ ] Run `java -version` and see JDK 21
+- [ ] Write and run a Java program from both an IDE and the terminal
+- [ ] Commit and push code to GitHub
+- [ ] Understand the directory structure of a standard Java Maven project
 
 ## Before You Start
 

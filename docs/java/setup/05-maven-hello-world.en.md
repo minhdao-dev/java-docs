@@ -1,4 +1,4 @@
-# Maven and Hello World
+﻿# Maven and Hello World
 
 ## 1. What is Maven
 
@@ -185,7 +185,7 @@ cd hello-world
 
 Open (or create) `App.java` in `src/main/java/com/example/`:
 
-```java title="src/main/java/com/example/App.java"
+```java
 package com.example;
 
 public class App {

@@ -1,4 +1,4 @@
-# Operators
+﻿# Operators
 
 ## 1. What is it
 
@@ -304,7 +304,7 @@ int result = (2 + 3) * 4; // 20
 
 ## 11. Code example
 
-```java title="OperatorsDemo.java" linenums="1"
+```java linenums="1"
 public class OperatorsDemo {
 
     public static void main(String[] args) {

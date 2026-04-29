@@ -314,12 +314,12 @@ System.out.println(p1);            // Point[x=3, y=4]
 
 ## 8. Code example
 
-```java title="BankAccount.java" linenums="1"
+```java
 import java.util.Objects;
 
 public class BankAccount {
 
-    private static int totalAccounts = 0; // (1)!
+    private static int totalAccounts = 0; // static: shared across all instances, lives in Metaspace
 
     private final String accountId;
     private final String owner;
@@ -328,7 +328,7 @@ public class BankAccount {
     public BankAccount(String owner, double initialBalance) {
         this.owner     = owner;
         this.balance   = initialBalance;
-        this.accountId = "ACC-" + (++totalAccounts); // (2)!
+        this.accountId = "ACC-" + (++totalAccounts); // auto-generated unique ID from shared counter
     }
 
     public void deposit(double amount) {
@@ -344,7 +344,7 @@ public class BankAccount {
 
     public double getBalance() { return balance; }
 
-    public static int getTotalAccounts() { return totalAccounts; } // (3)!
+    public static int getTotalAccounts() { return totalAccounts; } // static: no object needed, call as BankAccount.getTotalAccounts()
 
     @Override
     public String toString() {
@@ -355,7 +355,7 @@ public class BankAccount {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof BankAccount other)) return false;
-        return accountId.equals(other.accountId); // (4)!
+        return accountId.equals(other.accountId); // equal if same accountId, regardless of balance or owner
     }
 
     @Override
@@ -382,11 +382,6 @@ public class BankAccount {
     }
 }
 ```
-
-1. `static` — this field lives in Metaspace, shared across all instances. Incremented every time the constructor runs.
-2. `accountId` is assigned from the already-incremented `totalAccounts` — each account gets a unique, auto-generated ID.
-3. `static` method — called as `BankAccount.getTotalAccounts()`, no object required. Can only access static members.
-4. Two `BankAccount` objects are equal if they share the same `accountId` — regardless of `balance` or `owner`.
 
 ---
 

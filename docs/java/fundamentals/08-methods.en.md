@@ -1,21 +1,21 @@
-# Methods and Pass-by-value
+﻿# Methods and Pass-by-value
 
 ## 1. What is it
 
 A **method** is a named block of code that encapsulates a specific task and can be reused as many times as needed.
 
-```java title="Anatomy of a method"
-public static int add(int a, int b) { // (1)!
-    return a + b; // (2)!
+```java
+public static int add(int a, int b) {
+    return a + b;
 }
 ```
 
-1.  - **`public`** — access modifier
-    - **`static`** — class-level, no object needed to call it
-    - **`int`** — return type
-    - **`add`** — method name (camelCase)
-    - **`(int a, int b)`** — parameter list (type + name per pair)
-2.  Method body — `return` sends the result back to the caller.
+- **`public`** — access modifier
+- **`static`** — class-level, no object needed to call it
+- **`int`** — return type
+- **`add`** — method name (camelCase)
+- **`(int a, int b)`** — parameter list (type + name per pair)
+- Method body: `return` sends the result back to the caller.
 
 Calling a method:
 
@@ -277,7 +277,7 @@ static int sumDigits(int n) {
 
 ## 9. Code example
 
-```java title="MethodsDemo.java" linenums="1"
+```java linenums="1"
 import java.util.Arrays;
 
 public class MethodsDemo {

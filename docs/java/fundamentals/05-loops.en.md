@@ -1,4 +1,4 @@
-# Loops — for / while / do-while / for-each
+﻿# Loops — for / while / do-while / for-each
 
 ## 1. What is it
 
@@ -368,7 +368,7 @@ for (int i = 1; i <= 5; i++) {
 
 ## 10. Code example
 
-```java title="LoopsDemo.java" linenums="1"
+```java linenums="1"
 import java.util.ArrayList;
 import java.util.List;
 

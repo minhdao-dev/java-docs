@@ -317,17 +317,18 @@ Benefits of immutability:
 
 ## 8. Code example
 
-```java title="UserAccount.java" linenums="1"
+```java
 import java.util.Objects;
 
 public final class UserAccount {
 
-    private final String username;  // (1)!
+    private final String username;  // final: set once in constructor — identity cannot change
     private String       email;
     private int          loginCount;
     private boolean      active;
 
-    public UserAccount(String username, String email) { // (2)!
+    // no no-arg constructor — every UserAccount needs a valid username + email from the start
+    public UserAccount(String username, String email) {
         this.username   = validateUsername(username);
         this.email      = validateEmail(email);
         this.loginCount = 0;
@@ -354,7 +355,7 @@ public final class UserAccount {
     public boolean isActive()      { return active; }
 
     public void setEmail(String email) {
-        this.email = validateEmail(email); // (3)!
+        this.email = validateEmail(email); // reuses validation — one place to update the rule
     }
 
     public void recordLogin() {
@@ -376,7 +377,7 @@ public final class UserAccount {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof UserAccount u)) return false;
-        return username.equals(u.username); // (4)!
+        return username.equals(u.username); // equal by username only, not email or loginCount
     }
 
     @Override
@@ -403,11 +404,6 @@ public final class UserAccount {
     }
 }
 ```
-
-1. `final` field — must be assigned in the constructor, cannot change afterwards. `username` is the account's identity and must never be modified.
-2. Single constructor — no no-arg constructor. Every `UserAccount` must have a valid `username` and `email` from the start. There is no way to create a half-initialized object.
-3. `setEmail` reuses `validateEmail` — validation logic is defined once. Changing the rule requires editing only one method.
-4. Identity is based on `username` alone, not email or loginCount — two accounts with the same username represent the same user regardless of other fields.
 
 ---
 

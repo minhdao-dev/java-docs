@@ -62,6 +62,9 @@ nav:
       - Method và Pass-by-value: java/fundamentals/08-methods.md
       - OOP — Class và Object: java/fundamentals/09-oop-class-object.md
       - Encapsulation và Constructor: java/fundamentals/10-encapsulation-constructor.md
+      - Kế thừa — Inheritance: java/fundamentals/11-inheritance.md
+      - Đa hình — Polymorphism: java/fundamentals/12-polymorphism.md
+      - Abstract Class: java/fundamentals/13-abstract-class.md
 
 plugins:
   - search
@@ -94,6 +97,9 @@ plugins:
             Method và Pass-by-value: Method và Pass-by-value
             OOP — Class và Object: OOP — Class và Object
             Encapsulation và Constructor: Encapsulation và Constructor
+            Kế thừa — Inheritance: Kế thừa — Inheritance
+            Đa hình — Polymorphism: Đa hình — Polymorphism
+            Abstract Class: Abstract Class
         - locale: en
           name: English
           build: true
@@ -119,6 +125,9 @@ plugins:
             Method và Pass-by-value: Methods and Pass-by-value
             OOP — Class và Object: OOP — Class and Object
             Encapsulation và Constructor: Encapsulation and Constructor
+            Kế thừa — Inheritance: Inheritance
+            Đa hình — Polymorphism: Polymorphism
+            Abstract Class: Abstract Class
 
 markdown_extensions:
   - admonition
@@ -160,3 +169,4 @@ extra_javascript:
   - assets/javascripts/lang-switcher.js
   - assets/javascripts/prev-next-nav.js
   - assets/javascripts/sub-nav.js
+  - assets/javascripts/reading-progress.js

@@ -156,12 +156,38 @@
    TYPOGRAPHY & CONTENT STYLING
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── H1 — page title ──────────────────────────────────────────── */
+/* ── H1 — gradient text + gradient underline ──────────────────── */
 
 .md-typeset h1 {
-    padding-bottom: 0.45rem;
-    border-bottom: 2px solid var(--md-primary-fg-color);
     font-weight: 800;
+    padding-bottom: 0.5rem;
+    border-bottom: none;
+    background: linear-gradient(135deg, #0C4A6E 0%, #0369A1 55%, #0EA5E9 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    isolation: isolate;
+}
+
+.md-typeset h1::after {
+    content: '';
+    display: block;
+    height: 2px;
+    margin-top: 0.1rem;
+    background: linear-gradient(90deg, #0369A1, #0EA5E9 60%, transparent);
+    border-radius: 1px;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1 {
+    background: linear-gradient(135deg, #7DD3FC 0%, #38BDF8 55%, #BAE6FD 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+[data-md-color-scheme="slate"] .md-typeset h1::after {
+    background: linear-gradient(90deg, #0EA5E9, #38BDF8 60%, transparent);
 }
 
 /* ── H2 — main section headings ───────────────────────────────── */
@@ -192,10 +218,8 @@
 
 .md-typeset h4 {
     color: var(--md-primary-fg-color);
-    font-size: 0.85em;
+    font-size: 0.9em;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
 }
 
 /* ── Horizontal rule — section break ──────────────────────────── */
@@ -207,13 +231,17 @@
 
 /* ── Tables ───────────────────────────────────────────────────── */
 
-/* Rounded corners + horizontal scroll on mobile */
+/* Rounded corners + centered + horizontal scroll on mobile */
 .md-typeset table:not([class]) {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     clip-path: inset(0 round 10px);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+    width: fit-content;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 [data-md-color-scheme="slate"] .md-typeset table:not([class]) {
@@ -238,40 +266,126 @@
     background-color: rgba(14, 165, 233, 0.08);
 }
 
-/* ── Inline code ──────────────────────────────────────────────── */
+/* ═══════════════════════════════════════════════════════════════
+   CODE — Theme-aware
+   Light mode: Material default Pygments theme
+   Dark  mode: One Dark (#282c34 · #abb2bf · JetBrains Mono)
+   Filename bar · per-line hover (anchor_linenums + linenums="1")
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Dark mode only: One Dark CSS variables ───────────────────── */
+
+[data-md-color-scheme="slate"] {
+    --md-code-bg-color: #282c34;
+    --md-code-fg-color: #abb2bf;
+    --md-code-hl-color: rgba(171, 178, 191, 0.10);
+}
+
+/* ── Inline code ─────────────────────────────────────────────── */
 
 .md-typeset :not(pre) > code {
+    border-radius: 4px;
+    padding: 0.05em 0.35em;
+    font-size: 0.85em;
+    font-weight: 500;
+    font-family: 'JetBrains Mono', var(--md-code-font-family), monospace;
+}
+
+[data-md-color-scheme="default"] .md-typeset :not(pre) > code {
     background-color: rgba(3, 105, 161, 0.09);
     color: #075985;
-    border-radius: 4px;
-    padding: 0.06em 0.3em;
-    font-size: 0.88em;
-    font-weight: 500;
 }
 
 [data-md-color-scheme="slate"] .md-typeset :not(pre) > code {
-    background-color: rgba(14, 165, 233, 0.13);
+    background-color: #2c313a;
+    color: #e06c75;
+}
+
+/* ── Line numbers — hidden ────────────────────────────────────── */
+
+.md-typeset .highlighttable .linenos,
+.md-typeset .linenodiv {
+    display: none !important;
+}
+
+.md-typeset .highlighttable .code {
+    width: 100%;
+}
+
+/* ── Filename / title bar ─────────────────────────────────────── */
+
+.md-typeset .highlight > .filename {
+    display: block;
+    font-family: 'JetBrains Mono', var(--md-code-font-family), monospace;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    padding: 0.45rem 1rem;
+    border-radius: 10px 10px 0 0;
+    user-select: none;
+}
+
+[data-md-color-scheme="default"] .md-typeset .highlight > .filename {
+    background: #f0f4f8;
+    color: #0369A1;
+    border-bottom: 1px solid #d8e4ee;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight > .filename {
+    background: #1e2a35;
     color: #7DD3FC;
+    border-bottom: 1px solid #2a3a4a;
 }
 
-/* ── Code blocks ──────────────────────────────────────────────── */
-
-/* Remove Material's mobile bleed — keep same side spacing as callout */
-@media screen and (max-width: 44.984375em) {
-    .md-content__inner > .highlight {
-        margin-left: 0;
-        margin-right: 0;
-    }
+/* Flatten pre top-radius when filename bar is present */
+.md-typeset .highlight:has(> .filename) > pre {
+    border-radius: 0 0 10px 10px;
+    margin-top: 0;
 }
+
+/* ── Copy button — absolute on .highlight (outside scroll container) ── */
+
+.md-typeset .highlight {
+    position: relative;
+}
+
+.md-typeset .highlight .md-clipboard {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 10;
+    margin: 0;
+}
+
+/* Push button below filename tab when present */
+.md-typeset .highlight:has(.filename) .md-clipboard {
+    top: 2.8rem;
+}
+
+/* ── Pre block — layout only, color via scheme ───────────────── */
 
 .md-typeset pre {
     margin: 1.1em 0;
     border-radius: 10px;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     overflow-x: auto;
 }
 
+[data-md-color-scheme="default"] .md-typeset pre {
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .md-typeset pre {
+    background: #282c34;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55);
+}
+
+/* ── Code element — layout + font, color via scheme ─────────── */
+
 .md-typeset pre > code {
+    background: transparent;
+    font-family: 'JetBrains Mono', var(--md-code-font-family), monospace;
+    font-size: 0.85em;
+    font-variant-ligatures: common-ligatures;
     white-space: pre;
     overflow-wrap: normal;
     word-break: normal;
@@ -280,9 +394,107 @@
     width: fit-content;
 }
 
-[data-md-color-scheme="slate"] .md-typeset pre {
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+[data-md-color-scheme="slate"] .md-typeset pre > code {
+    color: #abb2bf;
 }
+
+/* ── Per-line hover (anchor_linenums: true + linenums="1") ─────── */
+
+.md-typeset pre > code > span[id^="__span"] {
+    display: block;
+    border-radius: 2px;
+    transition: background 0.08s ease;
+}
+
+.md-typeset pre > code > span[id^="__span"]:hover {
+    background: rgba(171, 178, 191, 0.08);
+}
+
+/* ── Highlighted lines via hl_lines ──────────────────────────── */
+
+[data-md-color-scheme="default"] .md-typeset .highlight .hll {
+    background: rgba(3, 105, 161, 0.12) !important;
+    border-left: 3px solid var(--md-primary-fg-color);
+    display: block;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .hll {
+    background: rgba(209, 154, 102, 0.18) !important;
+    border-left: 3px solid #d19a66;
+    display: block;
+}
+
+/* ── Pygments tokens — One Dark, dark mode only ──────────────── */
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .c,
+[data-md-color-scheme="slate"] .md-typeset .highlight .c1,
+[data-md-color-scheme="slate"] .md-typeset .highlight .cm,
+[data-md-color-scheme="slate"] .md-typeset .highlight .cs,
+[data-md-color-scheme="slate"] .md-typeset .highlight .cp,
+[data-md-color-scheme="slate"] .md-typeset .highlight .ch  { color: #5c6370; font-style: italic; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .k,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kd,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kn,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kr,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kc,
+[data-md-color-scheme="slate"] .md-typeset .highlight .kp,
+[data-md-color-scheme="slate"] .md-typeset .highlight .ow  { color: #c678dd; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .kt  { color: #e5c07b; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .s,
+[data-md-color-scheme="slate"] .md-typeset .highlight .s1,
+[data-md-color-scheme="slate"] .md-typeset .highlight .s2,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sa,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sb,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sc,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sd,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sh,
+[data-md-color-scheme="slate"] .md-typeset .highlight .si,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sl,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sr,
+[data-md-color-scheme="slate"] .md-typeset .highlight .ss,
+[data-md-color-scheme="slate"] .md-typeset .highlight .sx  { color: #98c379; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .se  { color: #56b6c2; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .m,
+[data-md-color-scheme="slate"] .md-typeset .highlight .mb,
+[data-md-color-scheme="slate"] .md-typeset .highlight .mf,
+[data-md-color-scheme="slate"] .md-typeset .highlight .mh,
+[data-md-color-scheme="slate"] .md-typeset .highlight .mi,
+[data-md-color-scheme="slate"] .md-typeset .highlight .mo,
+[data-md-color-scheme="slate"] .md-typeset .highlight .il  { color: #d19a66; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nf,
+[data-md-color-scheme="slate"] .md-typeset .highlight .fm  { color: #61afef; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .nc  { color: #e5c07b; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .nb  { color: #e06c75; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .nd  { color: #61afef; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .no  { color: #e5c07b; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .nt  { color: #e06c75; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .na  { color: #d19a66; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .bp  { color: #e06c75; font-style: italic; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .nv,
+[data-md-color-scheme="slate"] .md-typeset .highlight .vi,
+[data-md-color-scheme="slate"] .md-typeset .highlight .vm,
+[data-md-color-scheme="slate"] .md-typeset .highlight .vc  { color: #e06c75; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .o   { color: #56b6c2; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .p,
+[data-md-color-scheme="slate"] .md-typeset .highlight .n,
+[data-md-color-scheme="slate"] .md-typeset .highlight .nl,
+[data-md-color-scheme="slate"] .md-typeset .highlight .nn  { color: #abb2bf; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .gd  { color: #e06c75; background: rgba(224, 108, 117, 0.12); display: block; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .gi  { color: #98c379; background: rgba(152, 195, 121, 0.12); display: block; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .gu  { color: #c678dd; font-weight: 700; }
+[data-md-color-scheme="slate"] .md-typeset .highlight .gh  { color: #61afef; font-weight: 700; }
+
+[data-md-color-scheme="slate"] .md-typeset .highlight .err { color: #e06c75; background: transparent; }
 
 /* ── Admonitions ──────────────────────────────────────────────── */
 
@@ -444,27 +656,26 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
-   LAYOUT — Wider content area
-   Material default grid = 1220px with two 12.1rem sidebars.
-   Increasing grid width + narrowing sidebars gives more room.
+   LAYOUT — 3-column balance
+   Grid 1440px · Left nav 12rem · TOC 14.5rem · Content ~1016px
+   Content inner capped at 860px for comfortable reading line length.
    ═══════════════════════════════════════════════════════════════ */
 
-/* Expand the global grid to give more room for content */
 .md-grid {
     max-width: 1440px;
 }
 
-/* Narrow the left nav sidebar slightly */
-@media screen and (min-width: 76.25em) {
+/* Left nav is inline from Material's $break-screen (960px) */
+@media screen and (min-width: 60em) {
     .md-sidebar--primary {
-        width: 10.4rem;
+        width: 12rem;
     }
 }
 
-/* Narrow the right TOC sidebar slightly */
+/* Right TOC is inline from Material's $break-large (1220px) */
 @media screen and (min-width: 76.25em) {
     .md-sidebar--secondary {
-        width: 10rem;
+        width: 14.5rem;
     }
 }
 
@@ -553,4 +764,474 @@
 /* Hide the "Material for MkDocs" link */
 .md-footer-copyright > a {
     display: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   READING PROGRESS BAR
+   ═══════════════════════════════════════════════════════════════ */
+
+#reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, #0C4A6E 0%, #0369A1 40%, #0EA5E9 80%, #38BDF8 100%);
+    z-index: 10000;
+    transition: width 0.1s linear;
+    border-radius: 0 2px 2px 0;
+    pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO TITLE ZONE — background via ::before để không conflict
+   với gradient text đang dùng background-clip: text trên h1
+   ═══════════════════════════════════════════════════════════════ */
+
+.md-content__inner > h1:first-child {
+    margin: -1.2rem -1.6rem 2rem;
+    padding: 2.2rem 1.6rem 1.4rem;
+    border-radius: 0 0 16px 16px;
+}
+
+.md-content__inner > h1:first-child::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(3, 105, 161, 0.07) 0%, rgba(14, 165, 233, 0.02) 100%);
+    border-radius: 0 0 16px 16px;
+    z-index: -1;
+    pointer-events: none;
+}
+
+[data-md-color-scheme="slate"] .md-content__inner > h1:first-child::before {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.1) 0%, rgba(56, 189, 248, 0.03) 100%);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BLOCKQUOTE — Interview Q&A answer cards
+   ═══════════════════════════════════════════════════════════════ */
+
+.md-typeset blockquote {
+    border-left: 4px solid var(--md-primary-fg-color);
+    background: rgba(3, 105, 161, 0.05);
+    border-radius: 0 10px 10px 0;
+    padding: 0.9rem 1.1rem;
+    margin: 0.5rem 0 1.2rem;
+    color: var(--md-default-fg-color);
+    box-shadow: 0 2px 8px rgba(3, 105, 161, 0.07);
+    font-style: normal;
+}
+
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+    background: rgba(14, 165, 233, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.md-typeset blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   ANIMATED LINK UNDERLINE
+   ═══════════════════════════════════════════════════════════════ */
+
+.md-content .md-typeset a:not([class]):not(.headerlink) {
+    text-decoration: underline;
+    text-decoration-color: rgba(3, 105, 161, 0.25);
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.5px;
+    color: var(--md-primary-fg-color);
+    transition: text-decoration-color 0.22s ease, color 0.22s ease;
+}
+
+.md-content .md-typeset a:not([class]):not(.headerlink):hover {
+    text-decoration-color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .md-content .md-typeset a:not([class]):not(.headerlink) {
+    text-decoration-color: rgba(14, 165, 233, 0.3);
+}
+
+[data-md-color-scheme="slate"] .md-content .md-typeset a:not([class]):not(.headerlink):hover {
+    text-decoration-color: var(--md-primary-fg-color);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOMEPAGE START BUTTON
+   ═══════════════════════════════════════════════════════════════ */
+
+.btn-start {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0C4A6E 0%, #0369A1 50%, #0EA5E9 100%) !important;
+    border: none !important;
+    border-radius: 2rem !important;
+    padding: 0.55rem 1.5rem !important;
+    font-weight: 700 !important;
+    font-size: 0.88rem !important;
+    letter-spacing: 0.04em;
+    color: #fff !important;
+    box-shadow: 0 4px 18px rgba(3, 105, 161, 0.38);
+    transition: transform 0.22s ease, box-shadow 0.22s ease !important;
+    text-decoration: none !important;
+}
+
+/* Shimmer sweep */
+.btn-start::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+    transform: skewX(-18deg);
+    transition: left 0.55s ease;
+    pointer-events: none;
+}
+
+.btn-start:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 28px rgba(3, 105, 161, 0.48) !important;
+    color: #fff !important;
+}
+
+.btn-start:hover::after {
+    left: 160%;
+}
+
+.btn-start:active {
+    transform: translateY(0px) !important;
+    box-shadow: 0 3px 12px rgba(3, 105, 161, 0.3) !important;
+}
+
+/* Arrow icon slides right on hover */
+.btn-start .twemoji,
+.btn-start [class^="twemoji"] {
+    display: inline-flex;
+    transition: transform 0.22s ease;
+}
+
+.btn-start:hover .twemoji,
+.btn-start:hover [class^="twemoji"] {
+    transform: translateX(4px);
+}
+
+[data-md-color-scheme="slate"] .btn-start {
+    background: linear-gradient(135deg, #0369A1 0%, #0EA5E9 60%, #38BDF8 100%) !important;
+    box-shadow: 0 4px 18px rgba(14, 165, 233, 0.32);
+}
+
+[data-md-color-scheme="slate"] .btn-start:hover {
+    box-shadow: 0 8px 28px rgba(14, 165, 233, 0.42) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOMEPAGE STATS BAR
+   ═══════════════════════════════════════════════════════════════ */
+
+.homepage-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.homepage-stats span {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.28rem 0.75rem;
+    border-radius: 2rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    background: rgba(3, 105, 161, 0.07);
+    color: var(--md-primary-fg-color);
+    border: 1px solid rgba(3, 105, 161, 0.15);
+}
+
+[data-md-color-scheme="slate"] .homepage-stats span {
+    background: rgba(14, 165, 233, 0.1);
+    border-color: rgba(14, 165, 233, 0.2);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HOMEPAGE ROADMAP — roadmap.sh style vertical flow
+   ═══════════════════════════════════════════════════════════════ */
+
+.roadmap {
+    position: relative;
+    padding-left: 2.2rem;
+    margin: 0.5rem 0 2rem;
+}
+
+/* Vertical spine */
+.roadmap::before {
+    content: '';
+    position: absolute;
+    left: 0.55rem;
+    top: 1.1rem;
+    bottom: 1.1rem;
+    width: 2px;
+    background: linear-gradient(to bottom,
+        #16a34a 0%,
+        var(--md-primary-fg-color) 12%,
+        rgba(3, 105, 161, 0.22) 38%,
+        transparent 100%);
+}
+
+[data-md-color-scheme="slate"] .roadmap::before {
+    background: linear-gradient(to bottom,
+        #4ade80 0%,
+        #0EA5E9 12%,
+        rgba(14, 165, 233, 0.18) 38%,
+        transparent 100%);
+}
+
+/* ── Individual phase node ───────────────────────────────────── */
+
+.rm-node {
+    position: relative;
+    margin-bottom: 0.55rem;
+    padding: 0.75rem 1rem;
+    border-radius: 10px;
+    border: 1.5px solid transparent;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none !important;
+    transition: border-color 0.2s, box-shadow 0.2s, transform 0.15s;
+}
+
+/* Dot on spine */
+.rm-node::before {
+    content: '';
+    position: absolute;
+    left: -1.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid;
+    background: #fff;
+    z-index: 1;
+}
+
+[data-md-color-scheme="slate"] .rm-node::before {
+    background: var(--md-default-bg-color);
+}
+
+.rm-phase-num {
+    flex-shrink: 0;
+    width: 2.1rem;
+    height: 2.1rem;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 800;
+    font-family: var(--md-code-font-family);
+}
+
+.rm-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.rm-title {
+    font-weight: 700;
+    font-size: 0.88rem;
+    line-height: 1.3;
+}
+
+.rm-meta {
+    font-size: 0.72rem;
+    margin-top: 0.12rem;
+    color: var(--md-default-fg-color--light);
+    line-height: 1.4;
+}
+
+.rm-badge {
+    display: inline-block;
+    padding: 0.08rem 0.45rem;
+    border-radius: 2rem;
+    font-size: 0.65rem;
+    font-weight: 700;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+/* ── DONE ─────────────────────────────────────────────────────── */
+
+.rm-done {
+    background: rgba(22, 163, 74, 0.05);
+    border-color: rgba(22, 163, 74, 0.22);
+}
+
+.rm-done::before {
+    border-color: #16a34a !important;
+    background: #16a34a !important;
+}
+
+.rm-done .rm-phase-num {
+    background: rgba(22, 163, 74, 0.1);
+    color: #15803d;
+}
+
+.rm-done .rm-title { color: #15803d; }
+
+a.rm-done:hover {
+    border-color: rgba(22, 163, 74, 0.45);
+    box-shadow: 0 3px 12px rgba(22, 163, 74, 0.1);
+    transform: translateX(3px);
+}
+
+.rm-badge--done {
+    background: rgba(22, 163, 74, 0.12);
+    color: #15803d;
+}
+
+[data-md-color-scheme="slate"] .rm-done::before { border-color: #4ade80 !important; background: #4ade80 !important; }
+[data-md-color-scheme="slate"] .rm-done .rm-phase-num { color: #4ade80; background: rgba(74, 222, 128, 0.1); }
+[data-md-color-scheme="slate"] .rm-done .rm-title { color: #4ade80; }
+[data-md-color-scheme="slate"] .rm-badge--done { background: rgba(74, 222, 128, 0.12); color: #4ade80; }
+
+/* ── ACTIVE ───────────────────────────────────────────────────── */
+
+.rm-active {
+    background: rgba(3, 105, 161, 0.06);
+    border-color: rgba(3, 105, 161, 0.3);
+}
+
+.rm-active::before {
+    border-color: var(--md-primary-fg-color) !important;
+    background: var(--md-primary-fg-color) !important;
+    animation: rm-pulse 2s ease-in-out infinite;
+}
+
+@keyframes rm-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(3, 105, 161, 0.4); }
+    50%       { box-shadow: 0 0 0 4px rgba(3, 105, 161, 0); }
+}
+
+.rm-active .rm-phase-num {
+    background: rgba(3, 105, 161, 0.1);
+    color: var(--md-primary-fg-color);
+}
+
+.rm-active .rm-title { color: var(--md-primary-fg-color); }
+
+a.rm-active:hover {
+    border-color: var(--md-primary-fg-color);
+    box-shadow: 0 3px 14px rgba(3, 105, 161, 0.14);
+    transform: translateX(3px);
+}
+
+.rm-badge--active {
+    background: rgba(3, 105, 161, 0.1);
+    color: var(--md-primary-fg-color);
+}
+
+[data-md-color-scheme="slate"] .rm-active::before {
+    border-color: #0EA5E9 !important;
+    background: #0EA5E9 !important;
+    animation: rm-pulse-dark 2s ease-in-out infinite;
+}
+
+@keyframes rm-pulse-dark {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.4); }
+    50%       { box-shadow: 0 0 0 4px rgba(14, 165, 233, 0); }
+}
+
+[data-md-color-scheme="slate"] .rm-active .rm-phase-num { color: #38bdf8; background: rgba(14, 165, 233, 0.1); }
+[data-md-color-scheme="slate"] .rm-active .rm-title { color: #38bdf8; }
+[data-md-color-scheme="slate"] .rm-badge--active { background: rgba(14, 165, 233, 0.12); color: #38bdf8; }
+
+/* ── SOON ─────────────────────────────────────────────────────── */
+
+.rm-soon {
+    background: transparent;
+    border-color: var(--md-default-fg-color--lightest);
+    opacity: 0.6;
+}
+
+.rm-soon::before {
+    border-color: var(--md-default-fg-color--light);
+}
+
+.rm-soon .rm-phase-num {
+    background: rgba(0, 0, 0, 0.04);
+    color: var(--md-default-fg-color--light);
+}
+
+.rm-soon .rm-title { color: var(--md-default-fg-color--light); }
+
+.rm-badge--soon {
+    background: rgba(0, 0, 0, 0.06);
+    color: var(--md-default-fg-color--light);
+}
+
+[data-md-color-scheme="slate"] .rm-soon .rm-phase-num { background: rgba(255, 255, 255, 0.05); }
+[data-md-color-scheme="slate"] .rm-badge--soon { background: rgba(255, 255, 255, 0.07); }
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+   Material breakpoints:
+     44.984375em  (720px) — mobile: drawer only, no inline sidebars
+     60em         (960px) — left nav becomes inline sidebar
+     76.25em     (1220px) — right TOC appears
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Mobile < 720px ───────────────────────────────────────────── */
+
+@media screen and (max-width: 44.984375em) {
+    /* Remove H1 hero horizontal bleed — prevents horizontal scroll */
+    .md-content__inner > h1:first-child {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        border-radius: 0;
+    }
+
+    /* Roadmap meta — reduce font so long tech-stack text doesn't overflow */
+    .rm-meta {
+        font-size: 0.68rem;
+        line-height: 1.5;
+    }
+
+    /* Prev/Next nav — allow wrapping on very narrow screens */
+    .pn-nav {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    /* Code blocks — no rounded corners on mobile */
+    .md-typeset pre,
+    .md-typeset .highlight > .filename,
+    .md-typeset .highlight:has(> .filename) > pre {
+        border-radius: 0;
+    }
+
+    /* Filename bar — slightly smaller on narrow screens */
+    .md-typeset .highlight > .filename {
+        font-size: 0.68rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   BACKGROUND DOT TEXTURE — subtle grid depth
+   ═══════════════════════════════════════════════════════════════ */
+
+[data-md-color-scheme="default"] body {
+    background-image: radial-gradient(rgba(3, 105, 161, 0.038) 1px, transparent 1px);
+    background-size: 28px 28px;
+}
+
+[data-md-color-scheme="slate"] body {
+    background-image: radial-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px);
+    background-size: 28px 28px;
 }

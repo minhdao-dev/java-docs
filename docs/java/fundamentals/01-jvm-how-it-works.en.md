@@ -1,4 +1,4 @@
-# JVM — How It Actually Works
+﻿# JVM — How It Actually Works
 
 ## 1. What is it
 
@@ -244,7 +244,7 @@ s = null;                        // reference dropped
 
 This code demonstrates what lives on the Stack vs the Heap:
 
-```java title="JvmMemoryDemo.java" linenums="1"
+```java linenums="1"
 public class JvmMemoryDemo {
 
     // Static field — lives in Method Area (Metaspace)
