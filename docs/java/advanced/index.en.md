@@ -1,6 +1,6 @@
 # Java Advanced
 
-Collections Framework, Generics, Lambda, Stream API, exception handling, and concurrency.
+Collections Framework, Generics, Lambda, Stream API, Date/Time API, Annotations & Reflection, exception handling, and concurrency.
 
 ## Prerequisites
 

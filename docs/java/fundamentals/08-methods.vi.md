@@ -283,6 +283,9 @@ static int sumDigits(int n) {
 
 ## 9. Code ví dụ
 
+!!! info "Verified"
+    Bản đầy đủ có thể compile: [`MethodsDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/methods/MethodsDemo.java)
+
 ```java linenums="1"
 import java.util.Arrays;
 

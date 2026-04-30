@@ -368,6 +368,9 @@ for (int i = 1; i <= 5; i++) {
 
 ## 10. Code ví dụ
 
+!!! info "Verified"
+    Bản đầy đủ có thể compile: [`LoopsDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/loops/LoopsDemo.java)
+
 ```java linenums="1"
 import java.util.ArrayList;
 import java.util.List;

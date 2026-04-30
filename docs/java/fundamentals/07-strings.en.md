@@ -225,6 +225,9 @@ System.out.println(sb.toString());  // "Hello, World"
 
 ## 8. Code example
 
+!!! info "Verified"
+    Full compilable source: [`StringDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/strings/StringDemo.java)
+
 ```java linenums="1"
 public class StringDemo {
 

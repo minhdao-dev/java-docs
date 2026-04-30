@@ -60,14 +60,26 @@ nav:
       - Mảng — Array 1D & 2D: java/fundamentals/06-arrays.md
       - String và StringBuilder: java/fundamentals/07-strings.md
       - Method và Pass-by-value: java/fundamentals/08-methods.md
-      - OOP — Class và Object: java/fundamentals/09-oop-class-object.md
-      - Encapsulation và Constructor: java/fundamentals/10-encapsulation-constructor.md
-      - Kế thừa — Inheritance: java/fundamentals/11-inheritance.md
-      - Đa hình — Polymorphism: java/fundamentals/12-polymorphism.md
-      - Abstract Class: java/fundamentals/13-abstract-class.md
+      - Enum: java/fundamentals/09-enum.md
+      - File I/O: java/fundamentals/10-file-io.md
+      - OOP — Class và Object: java/fundamentals/11-oop-class-object.md
+      - Encapsulation và Constructor: java/fundamentals/12-encapsulation-constructor.md
+      - Kế thừa — Inheritance: java/fundamentals/13-inheritance.md
+      - Đa hình — Polymorphism: java/fundamentals/14-polymorphism.md
+      - Abstract Class: java/fundamentals/15-abstract-class.md
+      - Records: java/fundamentals/16-records.md
+      - Interface: java/fundamentals/17-interface.md
+      - instanceof và Type Casting: java/fundamentals/18-instanceof-type-casting.md
+    - Java Nâng cao:
+      - Tổng quan: java/advanced/index.md
 
 plugins:
   - search
+  - social:
+      cards_layout_options:
+        background_color: "#0369A1"
+        color: "#FFFFFF"
+        font_family: Roboto
   - i18n:
       docs_structure: suffix
       languages:
@@ -95,11 +107,16 @@ plugins:
             Mảng — Array 1D & 2D: Mảng — Array 1D & 2D
             String và StringBuilder: String và StringBuilder
             Method và Pass-by-value: Method và Pass-by-value
+            Enum: Enum
+            File I/O: File I/O
             OOP — Class và Object: OOP — Class và Object
             Encapsulation và Constructor: Encapsulation và Constructor
             Kế thừa — Inheritance: Kế thừa — Inheritance
             Đa hình — Polymorphism: Đa hình — Polymorphism
             Abstract Class: Abstract Class
+            Records: Records
+            Interface: Interface
+            instanceof và Type Casting: instanceof và Type Casting
         - locale: en
           name: English
           build: true
@@ -123,11 +140,16 @@ plugins:
             Mảng — Array 1D & 2D: Arrays — 1D & 2D
             String và StringBuilder: String and StringBuilder
             Method và Pass-by-value: Methods and Pass-by-value
+            Enum: Enum
+            File I/O: File I/O
             OOP — Class và Object: OOP — Class and Object
             Encapsulation và Constructor: Encapsulation and Constructor
             Kế thừa — Inheritance: Inheritance
             Đa hình — Polymorphism: Polymorphism
             Abstract Class: Abstract Class
+            Records: Records
+            Interface: Interface
+            instanceof và Type Casting: instanceof and Type Casting
 
 markdown_extensions:
   - admonition

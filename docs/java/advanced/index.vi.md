@@ -1,6 +1,6 @@
 # Java Nâng cao
 
-Collections Framework, Generics, Lambda, Stream API, xử lý ngoại lệ và lập trình đồng thời.
+Collections Framework, Generics, Lambda, Stream API, Date/Time API, Annotations & Reflection, xử lý ngoại lệ và lập trình đồng thời.
 
 ## Điều kiện bắt đầu
 

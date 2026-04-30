@@ -244,7 +244,7 @@ if (obj instanceof String) {
 
 ### Pattern Matching (Java 16+, JEP 394)
 
-Combines the type check and variable declaration into a single step — `s` is scoped to the `if` block:
+Combines the type check and variable declaration into a single step — `s` is scoped to the `if` block (preview Java 14–15 via JEP 305/375, finalized Java 16 via JEP 394):
 
 ```java
 if (obj instanceof String s) {
@@ -303,6 +303,9 @@ int result = (2 + 3) * 4; // 20
 ---
 
 ## 11. Code example
+
+!!! info "Verified"
+    Full compilable source: [`OperatorsDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/operators/OperatorsDemo.java)
 
 ```java linenums="1"
 public class OperatorsDemo {
@@ -437,6 +440,7 @@ boolean clear = true || (false && false);     // ✅
 > It combines the type check and variable binding into one step, eliminating a manual cast
 > and reducing the risk of `ClassCastException`.
 > `if (obj instanceof String s)` — if the check passes, `s` is immediately usable as a `String`.
+> (Feature history: preview Java 14–15, JEP 305/375; finalized Java 16, JEP 394.)
 
 **Q5: What is the difference between `>>` and `>>>`?**
 

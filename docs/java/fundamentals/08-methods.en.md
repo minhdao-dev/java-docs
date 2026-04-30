@@ -277,6 +277,9 @@ static int sumDigits(int n) {
 
 ## 9. Code example
 
+!!! info "Verified"
+    Full compilable source: [`MethodsDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/methods/MethodsDemo.java)
+
 ```java linenums="1"
 import java.util.Arrays;
 

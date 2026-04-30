@@ -198,6 +198,7 @@ if (animal instanceof Dog dog) {   // check + cast + variable declaration in one
 
 !!! tip "Prefer pattern matching `instanceof` from Java 16+"
     More concise, and eliminates the risk of forgetting to check before casting. Lesson 15 will cover `instanceof` and type casting in depth.
+    (Feature history: preview Java 14–15, JEP 305/375; finalized Java 16, JEP 394.)
 
 ---
 

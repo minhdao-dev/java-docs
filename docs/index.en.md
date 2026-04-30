@@ -30,7 +30,7 @@ Java Backend documentation — from JVM to Microservices.
   <div class="rm-phase-num">01</div>
   <div class="rm-info">
     <div class="rm-title">Java Fundamentals</div>
-    <div class="rm-meta">13/16 lessons · <span class="rm-badge rm-badge--active">▶ In progress</span></div>
+    <div class="rm-meta">18/19 lessons · <span class="rm-badge rm-badge--active">▶ In progress</span></div>
   </div>
 </a>
 
@@ -38,7 +38,7 @@ Java Backend documentation — from JVM to Microservices.
   <div class="rm-phase-num">02</div>
   <div class="rm-info">
     <div class="rm-title">Java Core Advanced</div>
-    <div class="rm-meta">Collections, Generics, Lambda, Stream API, Concurrency · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
+    <div class="rm-meta">Collections, Generics, Lambda, Stream API, Date/Time API, Annotations, Reflection, Concurrency · <span class="rm-badge rm-badge--soon">Coming soon</span></div>
   </div>
 </div>
 

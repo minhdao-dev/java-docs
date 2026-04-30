@@ -306,6 +306,9 @@ System.out.println(Arrays.deepToString(x));    // [[1, 2], [3, 4]]
 
 ## 9. Code example
 
+!!! info "Verified"
+    Full compilable source: [`ArraysDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/arrays/ArraysDemo.java)
+
 ```java linenums="1"
 import java.util.Arrays;
 

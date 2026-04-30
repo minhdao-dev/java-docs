@@ -244,7 +244,7 @@ if (obj instanceof String) {
 
 ### Pattern Matching (Java 16+, JEP 394)
 
-Kết hợp kiểm tra kiểu và khai báo biến vào một bước — biến `s` chỉ tồn tại trong phạm vi `if`:
+Kết hợp kiểm tra kiểu và khai báo biến vào một bước — biến `s` chỉ tồn tại trong phạm vi `if` (preview Java 14–15 qua JEP 305/375, chính thức từ Java 16 qua JEP 394):
 
 ```java
 if (obj instanceof String s) {
@@ -303,6 +303,9 @@ int result = (2 + 3) * 4; // 20
 ---
 
 ## 11. Code ví dụ
+
+!!! info "Verified"
+    Bản đầy đủ có thể compile: [`OperatorsDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/operators/OperatorsDemo.java)
 
 ```java linenums="1"
 public class OperatorsDemo {
@@ -435,6 +438,7 @@ boolean clear = true || (false && false);     // ✅
 
 > Gộp việc kiểm tra kiểu và ép kiểu vào một bước, loại bỏ cast thủ công và giảm rủi ro `ClassCastException`.
 > `if (obj instanceof String s)` — nếu điều kiện đúng, `s` đã sẵn sàng dùng ngay trong block.
+> (Lịch sử: preview Java 14–15, JEP 305/375; chính thức Java 16, JEP 394.)
 
 **Q5: `>>` và `>>>` khác nhau thế nào?**
 

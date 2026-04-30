@@ -317,6 +317,9 @@ Lợi ích của immutability:
 
 ## 8. Code ví dụ
 
+!!! info "Verified"
+    Bản đầy đủ có thể compile: [`UserAccount.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/encapsulation/UserAccount.java)
+
 ```java
 import java.util.Objects;
 

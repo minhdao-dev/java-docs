@@ -158,7 +158,7 @@ switch (longVar) { ... } // ❌ long — lỗi biên dịch
 
 ## 5. switch expression (Java 14+)
 
-Java 14 giới thiệu **switch expression** — phiên bản hiện đại, gọn hơn và an toàn hơn:
+**Switch expression** ra preview từ Java 12–13 và chính thức trong Java 14 — phiên bản hiện đại, gọn hơn và an toàn hơn:
 
 ```java
 // Switch statement — nhiều break, dài dòng
@@ -272,6 +272,9 @@ static String handleNull(String s) {
 ---
 
 ## 7. Code ví dụ
+
+!!! info "Verified"
+    Bản đầy đủ có thể compile: [`ControlFlowDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/controlflow/ControlFlowDemo.java)
 
 ```java linenums="1"
 public class ControlFlowDemo {

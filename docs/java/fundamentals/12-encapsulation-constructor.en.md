@@ -317,6 +317,9 @@ Benefits of immutability:
 
 ## 8. Code example
 
+!!! info "Verified"
+    Full compilable source: [`UserAccount.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/encapsulation/UserAccount.java)
+
 ```java
 import java.util.Objects;
 

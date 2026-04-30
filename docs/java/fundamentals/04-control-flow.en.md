@@ -158,7 +158,7 @@ switch (longVar) { ... } // ❌ long — compile error
 
 ## 5. switch expression (Java 14+)
 
-Java 14 introduced **switch expressions** — a modern, concise, and safer form:
+**Switch expressions** were in preview in Java 12–13 and finalized in Java 14 — a modern, concise, and safer form:
 
 ```java
 // switch statement — verbose, multiple breaks
@@ -272,6 +272,9 @@ static String handleNull(String s) {
 ---
 
 ## 7. Code example
+
+!!! info "Verified"
+    Full compilable source: [`ControlFlowDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/controlflow/ControlFlowDemo.java)
 
 ```java linenums="1"
 public class ControlFlowDemo {

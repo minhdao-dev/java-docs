@@ -99,7 +99,7 @@ in Old Gen (major/full GC, slow).
 
 !!! info "Java 25 — Compact Object Headers (JEP 519)"
     Every object on the Heap carries a header with metadata (hash code, class pointer, locking info).
-    Before Java 25, this header consumed **12–16 bytes** per object.
+    Before Java 25, this header consumed **12–16 bytes** per object (12 bytes with compressed oops enabled — the JVM default; 16 bytes when disabled).
     Java 25 shrinks it down to **8 bytes** — for applications creating millions of small objects,
     this significantly reduces heap pressure and improves cache locality.
     Enable with: `-XX:+UseCompactObjectHeaders`
@@ -236,13 +236,16 @@ s = null;                        // reference dropped
     ZGC was introduced in **Java 11** (experimental), stable from Java 15.
     Shenandoah was introduced in **Java 12** (OpenJDK), stable from Java 15.
     Java 21 introduced **Generational ZGC** — adding Young/Old tiers to ZGC, not ZGC itself.
-    **Java 25 LTS** is the current baseline. G1GC remains the default.
+    **Java 25 LTS** is the current baseline. G1GC remains the default. Java 21 LTS is still actively supported in parallel and remains the most widely deployed LTS in production as of 2026.
 
 ---
 
 ## 4. Code example
 
 This code demonstrates what lives on the Stack vs the Heap:
+
+!!! info "Verified"
+    Full compilable source: [`JvmMemoryDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/jvm/JvmMemoryDemo.java)
 
 ```java linenums="1"
 public class JvmMemoryDemo {

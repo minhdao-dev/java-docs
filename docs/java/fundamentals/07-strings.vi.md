@@ -225,6 +225,9 @@ System.out.println(sb.toString()); // "Hello, World"
 
 ## 8. Code ví dụ
 
+!!! info "Verified"
+    Bản đầy đủ có thể compile: [`StringDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/strings/StringDemo.java)
+
 ```java linenums="1"
 public class StringDemo {
 
