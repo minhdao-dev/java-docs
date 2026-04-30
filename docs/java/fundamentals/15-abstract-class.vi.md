@@ -73,7 +73,7 @@ Lợi ích của abstract class:
 | **Hợp đồng bắt buộc** | Subclass quên implement abstract method → compile error ngay, không phải runtime error |
 | **Code dùng chung** | Concrete method viết một lần trong abstract class, mọi subclass đều kế thừa |
 | **Đa hình** | `Shape s = new Circle(5)` hoạt động — dùng abstract type làm reference |
-| **Cài đặt một phần** | Khác interface (bài 14), abstract class có thể chứa state (fields) và concrete methods |
+| **Cài đặt một phần** | Khác interface (bài 17), abstract class có thể chứa state (fields) và concrete methods |
 
 ---
 
@@ -316,7 +316,7 @@ Trình tự tổng thể `readData → processData → writeData` được *cố
 - Muốn áp dụng Template Method Pattern
 - Cây kế thừa thể hiện quan hệ IS-A rõ ràng trong cùng một họ
 
-**Khi nào dùng interface (bài 14):**
+**Khi nào dùng interface (bài 17):**
 
 - Chỉ cần định nghĩa hợp đồng (class *có thể làm gì*), không cần state chung
 - Class cần thực hiện nhiều vai trò khác nhau

@@ -41,7 +41,7 @@ Key terms:
 - **Subclass / Child class / Derived class** — the class doing the inheriting (`Dog`)
 
 !!! note "Java only allows single inheritance"
-    A class can only `extends` one other class. There is no multiple inheritance in Java. Use `interface` (lesson 14) to achieve similar results.
+    A class can only `extends` one other class. There is no multiple inheritance in Java. Use `interface` (lesson 17) to achieve similar results.
 
 ---
 
@@ -77,7 +77,7 @@ public class Dog extends Animal { public Dog(String name) { super(name); } }
 Additionally:
 
 - **Centralizes shared behavior** — fixing `eat()` in `Animal` fixes it for every subclass
-- **Foundation for Polymorphism** — `Animal a = new Dog("Rex")` (covered in lesson 12)
+- **Foundation for Polymorphism** — `Animal a = new Dog("Rex")` (covered in lesson 14)
 - **Models the real world** — reflects IS-A relationships in the domain accurately
 
 ---

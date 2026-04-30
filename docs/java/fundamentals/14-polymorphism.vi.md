@@ -196,7 +196,7 @@ if (animal instanceof Dog dog) {   // check + cast + khai báo biến trong mộ
 ```
 
 !!! tip "Ưu tiên dùng pattern matching `instanceof` từ Java 16+"
-    Gọn hơn, không có nguy cơ quên check trước khi cast. Bài 15 sẽ đi sâu hơn vào `instanceof` và type casting.
+    Gọn hơn, không có nguy cơ quên check trước khi cast. Bài 18 sẽ đi sâu hơn vào `instanceof` và type casting.
     (Lịch sử: preview Java 14–15, JEP 305/375; chính thức Java 16, JEP 394.)
 
 ---

@@ -41,7 +41,7 @@ Từ khóa:
 - **Subclass / Child class / Derived class** — class kế thừa (`Dog`)
 
 !!! note "Java chỉ cho phép single inheritance"
-    Một class chỉ có thể `extends` đúng một class. Không có multiple inheritance trong Java. Thay vào đó, dùng `interface` (bài 14) để đạt được hiệu quả tương tự.
+    Một class chỉ có thể `extends` đúng một class. Không có multiple inheritance trong Java. Thay vào đó, dùng `interface` (bài 17) để đạt được hiệu quả tương tự.
 
 ---
 
@@ -77,7 +77,7 @@ public class Dog extends Animal { public Dog(String name) { super(name); } }
 Ngoài ra:
 
 - **Tập trung behavior chung** — sửa `eat()` ở `Animal` là sửa cho toàn bộ subclass
-- **Nền tảng cho Polymorphism** — `Animal a = new Dog("Rex")` (bài 12 sẽ đi sâu)
+- **Nền tảng cho Polymorphism** — `Animal a = new Dog("Rex")` (bài 14 sẽ đi sâu)
 - **Mô hình hóa thực tế** — phản ánh đúng quan hệ IS-A trong domain
 
 ---

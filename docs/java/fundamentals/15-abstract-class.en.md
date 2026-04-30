@@ -73,7 +73,7 @@ What abstract classes give you:
 | **Enforced contract** | Subclasses that forget to implement an abstract method fail at compile time, not at runtime |
 | **Shared code** | Concrete methods in the abstract class are written once and inherited by all subclasses |
 | **Polymorphism** | `Shape s = new Circle(5)` works — you can use the abstract type as a reference |
-| **Partial implementation** | Unlike an interface (lesson 14), an abstract class can carry state (fields) and concrete methods |
+| **Partial implementation** | Unlike an interface (lesson 17), an abstract class can carry state (fields) and concrete methods |
 
 ---
 
@@ -316,7 +316,7 @@ The overall sequence `readData → processData → writeData` is *fixed* in the 
 - You want to enforce a partial implementation pattern (Template Method)
 - The inheritance tree represents a clear IS-A family hierarchy
 
-**When to choose interface (lesson 14):**
+**When to choose interface (lesson 17):**
 
 - You only need to define a contract (what classes *can do*), with no shared state
 - You need a class to implement multiple capabilities
