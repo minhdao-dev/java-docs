@@ -26,6 +26,7 @@ Replace the class name with any of the following:
 
 | Lesson | Class |
 |--------|-------|
+| 01 — JVM: How It Works      | `fundamentals.jvm.JvmMemoryDemo` |
 | 02 — Variables & Data Types | `fundamentals.variables.DataTypesDemo` |
 | 03 — Operators              | `fundamentals.operators.OperatorsDemo` |
 | 04 — Control Flow           | `fundamentals.controlflow.ControlFlowDemo` |
@@ -35,10 +36,11 @@ Replace the class name with any of the following:
 | 08 — Methods                | `fundamentals.methods.MethodsDemo` |
 | 09 — Enums                  | `fundamentals.enums.EnumDemo` |
 | 10 — File I/O               | `fundamentals.fileio.StudentStorage` |
-| 11 — OOP: Class & Object    | `fundamentals.jvm.JvmMemoryDemo` |
 | 12 — Encapsulation          | `fundamentals.encapsulation.UserAccount` |
 | 16 — Records                | `fundamentals.records.RecordDemo` |
 | 17 — Interfaces             | `fundamentals.interfaces.InterfaceDemo` |
 | 18 — instanceof & Casting   | `fundamentals.casting.CastingDemo` |
+
+> Lessons 11, 13, 14, 15 do not have example files yet.
 
 > **Note:** `StudentStorage` writes to `data/students.txt` relative to the working directory.
