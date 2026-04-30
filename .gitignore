@@ -1,9 +1,26 @@
+# MkDocs
 site/
+mkdocs_server.log
+
+# Python
 __pycache__/
 *.pyc
 .venv/
 venv/
+
+# Environment
 .env
+
+# Claude Code
 .claude/
+
+# OS
 .DS_Store
+Thumbs.db
+
+# Logs
 *.log
+
+# IDEs
+.idea/
+.vscode/
