@@ -1,5 +1,13 @@
 package fundamentals.casting;
 
+/**
+ * Demonstrates {@code instanceof} pattern matching (Java 16+) and type casting:
+ * safe downcasting with binding variables, guarded patterns with {@code &&},
+ * and null-safe checks — eliminating explicit cast and separate null checks.
+ *
+ * <p>Lesson 18 — instanceof &amp; Type Casting
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/18-instanceof-type-casting.en.md">docs/java/fundamentals/18-instanceof-type-casting.en.md</a>)
+ */
 public class CastingDemo {
 
     abstract static class Shape {

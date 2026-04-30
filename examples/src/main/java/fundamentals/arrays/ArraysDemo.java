@@ -2,6 +2,14 @@ package fundamentals.arrays;
 
 import java.util.Arrays;
 
+/**
+ * Demonstrates 1-D and 2-D arrays: aggregation (sum, average, max),
+ * {@code Arrays.sort}, the two-sum O(n²) pattern (LeetCode #1),
+ * and printing a matrix with {@code Arrays.toString}.
+ *
+ * <p>Lesson 06 — Arrays
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/06-arrays.en.md">docs/java/fundamentals/06-arrays.en.md</a>)
+ */
 public class ArraysDemo {
 
     static int sum(int[] arr) {

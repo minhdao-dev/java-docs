@@ -1,5 +1,13 @@
 package fundamentals.records;
 
+/**
+ * Demonstrates Java records (Java 16+): compact constructors with validation,
+ * custom instance methods, static factory methods, generic records, and
+ * the auto-generated {@code equals}, {@code hashCode}, and {@code toString}.
+ *
+ * <p>Lesson 16 — Records
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/16-records.en.md">docs/java/fundamentals/16-records.en.md</a>)
+ */
 public class RecordDemo {
 
     record Point(double x, double y) {

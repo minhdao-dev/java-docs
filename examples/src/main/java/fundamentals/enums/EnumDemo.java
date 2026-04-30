@@ -1,5 +1,14 @@
 package fundamentals.enums;
 
+/**
+ * Demonstrates Java enums: simple constants with {@code name()} and
+ * {@code ordinal()}, switch expressions over enum values, enums with
+ * fields and methods, reverse lookup by field value, and iteration
+ * over all constants with {@code values()}.
+ *
+ * <p>Lesson 09 — Enums
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/09-enum.en.md">docs/java/fundamentals/09-enum.en.md</a>)
+ */
 public class EnumDemo {
 
     enum Priority { LOW, MEDIUM, HIGH, CRITICAL }

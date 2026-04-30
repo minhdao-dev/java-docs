@@ -3,6 +3,15 @@ package fundamentals.variables;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 
+/**
+ * Demonstrates Java primitive and reference types: {@code int}, {@code double},
+ * {@code boolean}, {@code char}, arrays, {@code var} inference (Java 10+),
+ * {@code BigDecimal} for monetary values, {@code ==} vs {@code equals},
+ * and the Integer cache boundary.
+ *
+ * <p>Lesson 02 — Variables &amp; Data Types
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/02-variables-datatypes.en.md">docs/java/fundamentals/02-variables-datatypes.en.md</a>)
+ */
 public class DataTypesDemo {
 
     public static void main(String[] args) {

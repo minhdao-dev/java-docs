@@ -1,5 +1,13 @@
 package fundamentals.strings;
 
+/**
+ * Demonstrates {@code String} operations: palindrome check with regex,
+ * {@code repeat} (Java 11+), manual CSV building with {@code StringBuilder},
+ * occurrence counting with {@code indexOf}, and {@code String.join}.
+ *
+ * <p>Lesson 07 — Strings
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/07-strings.en.md">docs/java/fundamentals/07-strings.en.md</a>)
+ */
 public class StringDemo {
 
     static boolean isPalindrome(String s) {

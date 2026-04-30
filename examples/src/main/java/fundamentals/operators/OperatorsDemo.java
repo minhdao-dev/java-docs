@@ -1,5 +1,13 @@
 package fundamentals.operators;
 
+/**
+ * Demonstrates Java operators: arithmetic, prefix/postfix increment,
+ * short-circuit evaluation, bitwise flags, ternary, instanceof pattern
+ * matching (Java 16+), and silent integer overflow.
+ *
+ * <p>Lesson 03 — Operators
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/03-operators.en.md">docs/java/fundamentals/03-operators.en.md</a>)
+ */
 public class OperatorsDemo {
 
     public static void main(String[] args) {

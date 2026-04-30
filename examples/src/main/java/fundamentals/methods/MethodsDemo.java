@@ -2,6 +2,14 @@ package fundamentals.methods;
 
 import java.util.Arrays;
 
+/**
+ * Demonstrates method design: overloading, varargs, pass-by-value for
+ * primitives vs reference types (array mutation), recursion (Euclidean GCD),
+ * and early-return classification.
+ *
+ * <p>Lesson 08 — Methods
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/08-methods.en.md">docs/java/fundamentals/08-methods.en.md</a>)
+ */
 public class MethodsDemo {
 
     // Overloading — find maximum

@@ -3,6 +3,13 @@ package fundamentals.loops;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Demonstrates Java loop constructs: enhanced {@code for}, indexed {@code for},
+ * two-pointer reverse, linear search, and {@code removeIf} with a lambda predicate.
+ *
+ * <p>Lesson 05 — Loops
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/05-loops.en.md">docs/java/fundamentals/05-loops.en.md</a>)
+ */
 public class LoopsDemo {
 
     static int sum(int[] arr) {

@@ -1,5 +1,13 @@
 package fundamentals.controlflow;
 
+/**
+ * Demonstrates control-flow patterns: early return, switch expressions
+ * with arrow syntax and {@code yield}, and pattern matching switch with
+ * guarded patterns (Java 21+).
+ *
+ * <p>Lesson 04 — Control Flow
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/04-control-flow.en.md">docs/java/fundamentals/04-control-flow.en.md</a>)
+ */
 public class ControlFlowDemo {
 
     // Early return — phân loại điểm

@@ -8,6 +8,15 @@ import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Demonstrates file I/O with {@code java.nio.file}: writing a list of records
+ * with {@code Files.write}, reading lines with {@code Files.readAllLines},
+ * and appending a record with {@code StandardOpenOption.APPEND}.
+ * Creates {@code data/students.txt} in the working directory at runtime.
+ *
+ * <p>Lesson 10 — File I/O
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/10-file-io.en.md">docs/java/fundamentals/10-file-io.en.md</a>)
+ */
 public class StudentStorage {
 
     private static final Path DATA_FILE = Path.of("data/students.txt");

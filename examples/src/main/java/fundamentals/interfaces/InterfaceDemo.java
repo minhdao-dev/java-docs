@@ -4,6 +4,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Demonstrates Java interfaces: abstract contracts, {@code default} methods,
+ * implementing multiple interfaces, and {@code Comparable} for natural ordering
+ * with {@code Collections.sort}.
+ *
+ * <p>Lesson 17 — Interfaces
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/17-interface.en.md">docs/java/fundamentals/17-interface.en.md</a>)
+ */
 public class InterfaceDemo {
 
     interface Shape {

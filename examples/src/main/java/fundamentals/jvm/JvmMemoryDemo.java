@@ -1,5 +1,13 @@
 package fundamentals.jvm;
 
+/**
+ * Demonstrates what lives on the Stack vs the Heap at runtime:
+ * primitives and references in Stack frames, objects in the Heap,
+ * and static fields in the Method Area (Metaspace).
+ *
+ * <p>Lesson 01 — JVM: How It Works
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/01-jvm-how-it-works.en.md">docs/java/fundamentals/01-jvm-how-it-works.en.md</a>)
+ */
 public class JvmMemoryDemo {
 
     // Static field — sống trong Method Area (Metaspace)

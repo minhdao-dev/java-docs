@@ -2,6 +2,14 @@ package fundamentals.encapsulation;
 
 import java.util.Objects;
 
+/**
+ * Demonstrates encapsulation: private fields with validation in setters,
+ * immutable identity ({@code final username}), defensive {@code toString},
+ * and value-based {@code equals}/{@code hashCode} keyed on username.
+ *
+ * <p>Lesson 12 — Encapsulation &amp; Constructors
+ * (<a href="https://github.com/minhdao-dev/java-docs/blob/main/docs/java/fundamentals/12-encapsulation-constructor.en.md">docs/java/fundamentals/12-encapsulation-constructor.en.md</a>)
+ */
 public final class UserAccount {
 
     private final String username;
