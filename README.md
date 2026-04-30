@@ -44,18 +44,19 @@ Java backend skills.
 
 ## Roadmap
 
-| # | Phase | Status | ETA |
-|---|-------|--------|-----|
-| 00 | Environment Setup | ✅ Done | — |
-| 01 | Java Fundamentals | 🚧 18 / 19 lessons | May 2026 |
-| 02 | OOP & Design Patterns | ⬜ Planned | Q3 2026 |
-| 03 | JVM Internals | ⬜ Planned | Q3 2026 |
-| 04 | Collections & Generics | ⬜ Planned | Q4 2026 |
-| 05 | Concurrency | ⬜ Planned | Q4 2026 |
-| 06 | Spring Boot | ⬜ Planned | Q1 2027 |
-| 07 | Spring Data & Databases | ⬜ Planned | Q1 2027 |
-| 08 | Testing | ⬜ Planned | Q2 2027 |
-| 09 | Microservices | ⬜ Planned | Q2 2027 |
+| # | Phase | Status |
+|---|-------|--------|
+| 00 | Setup & Mindset | ✅ Done |
+| 01 | Java Fundamentals | 🚧 18 / 19 lessons |
+| 02 | Java Core Advanced — Collections, Generics, Lambda, Stream API, Concurrency | ⬜ Planned |
+| 03 | Build Tools & Testing — Maven, JUnit 5, Mockito, TDD | ⬜ Planned |
+| 04 | SQL & Databases — PostgreSQL, JDBC, Transactions | ⬜ Planned |
+| 05 | Spring Boot Core — REST API, Spring Data JPA, Actuator | ⬜ Planned |
+| 06 | Spring Security & JWT — Auth, OAuth2 | ⬜ Planned |
+| 07 | Redis & Caching | ⬜ Planned |
+| 08 | Docker & CI/CD | ⬜ Planned |
+| 09 | Microservices & Kafka | ⬜ Planned |
+| 10 | DSA & Interview Prep | ⬜ Planned |
 
 ETAs are rough targets, not commitments. Each phase is published incrementally as lessons are
 finished — you can track progress in the nav or via commits.
