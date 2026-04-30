@@ -43,6 +43,9 @@ public class InterfaceDemo {
 
         Rectangle(double w, double h) { this.w = w; this.h = h; }
 
+        double width()  { return w; }
+        double height() { return h; }
+
         @Override public double area()      { return w * h; }
         @Override public double perimeter() { return 2 * (w + h); }
 
@@ -78,6 +81,6 @@ public class InterfaceDemo {
         );
         List<Rectangle> sorted = new ArrayList<>(rects);
         Collections.sort(sorted);
-        sorted.forEach(r -> System.out.printf("%.0fx%.0f = %.0f%n", r.w, r.h, r.area()));
+        sorted.forEach(r -> System.out.printf("%.0fx%.0f = %.0f%n", r.width(), r.height(), r.area()));
     }
 }
