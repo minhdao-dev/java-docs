@@ -75,7 +75,11 @@ nav:
       - Tổng quan: java/advanced/index.md
 
 plugins:
-  - search
+  - search:
+      lang:
+        - en
+        - vi
+      separator: '[\s\-,:!=\[\]()"`/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)'
   - social:
       cards_layout_options:
         background_color: "#0369A1"

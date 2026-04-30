@@ -1235,3 +1235,25 @@ a.rm-active:hover {
     background-image: radial-gradient(rgba(14, 165, 233, 0.05) 1px, transparent 1px);
     background-size: 28px 28px;
 }
+
+/* ═══════════════════════════════════════════════════════════════
+   SVG DIAGRAMS — max-width caps + mobile
+   Prevents diagrams from stretching wider than their native
+   viewBox on large screens (which thins out strokes / text).
+   On mobile (< 600px) the per-file caps are overridden so the
+   diagram still shrinks to fit the viewport.
+   ═══════════════════════════════════════════════════════════════ */
+
+.md-typeset img[src$="autoboxing-cache.svg"]      { max-width: 720px; }
+.md-typeset img[src$="constructor-chain.svg"]     { max-width: 820px; }
+.md-typeset img[src$="jvm-architecture.svg"]      { max-width: 680px; }
+.md-typeset img[src$="operator-precedence.svg"]   { max-width: 680px; }
+.md-typeset img[src$="heap-generations.svg"]      { max-width: 720px; }
+.md-typeset img[src$="interface-vs-abstract.svg"] { max-width: 700px; }
+
+@media screen and (max-width: 37.5em) {
+    /* Override per-file caps on narrow screens */
+    .md-typeset img[src$=".svg"] {
+        max-width: 100%;
+    }
+}
