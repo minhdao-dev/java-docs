@@ -14,24 +14,37 @@ public class JvmMemoryDemo {
     private static final String APP_NAME = "JvmDemo";
 
     public static void main(String[] args) {
-        // Primitive — sống trong Stack frame của main()
+        System.out.println("=== JVM Memory Demo ===\n");
+
+        // Static field — Method Area (Metaspace), shared across all instances
+        System.out.println("[Metaspace ] APP_NAME = \"" + APP_NAME + "\" (static final — loaded once, lives until class is unloaded)");
+
+        // Primitives — live in the Stack frame of main()
         int count = 5;
         double price = 9.99;
+        System.out.println("[Stack/main] count   = " + count  + "  (primitive int — stored directly in Stack frame)");
+        System.out.println("[Stack/main] price   = " + price  + " (primitive double — stored directly in Stack frame)");
 
-        // Reference sống trên Stack, object thật sống trên Heap
+        // Reference on Stack, actual object on Heap
         String label = new String("item");
+        System.out.println("[Stack/main] label   = <ref>   (reference variable — lives in Stack frame)");
+        System.out.println("[Heap      ] \"item\"            (String object — allocated on Heap, label points here)");
 
-        // Gọi method — Stack frame mới được tạo
+        // Calling calculate() pushes a NEW Stack frame on top of main()'s frame
+        System.out.println("\n[Stack     ] Calling calculate(" + count + ", " + price + ") → new frame pushed on top of main()");
         int result = calculate(count, price);
+        System.out.println("[Stack     ] calculate() returned → frame popped, local vars qty/unitPrice/total are gone");
 
-        System.out.println(result);
-    } // frame của main() bị pop. reference label biến mất.
-      // String "item" trên Heap giờ eligible for GC.
+        System.out.println("\n[Stack/main] result  = " + result + "  (5 × 9.99 = 49.95, truncated to int → 49)");
+        System.out.println("\n[Stack     ] main() ending → 'label' reference gone from Stack");
+        System.out.println("[Heap      ] String \"item\" is now unreachable → eligible for GC");
+    }
 
     private static int calculate(int qty, double unitPrice) {
-        // qty và unitPrice là bản sao (pass by value)
-        // Frame này nằm trên frame của main() trong Stack
+        // qty and unitPrice are COPIES (pass-by-value) — changing them here would NOT affect main()
+        System.out.println("[Stack/calc] qty=" + qty + ", unitPrice=" + unitPrice + "  (copies — pass-by-value)");
         double total = qty * unitPrice;
+        System.out.println("[Stack/calc] total = " + total + " (local var — lives only in this frame)");
         return (int) total;
-    } // frame bị pop
+    } // frame popped — total, qty, unitPrice are gone
 }
