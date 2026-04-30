@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # NMD Docs
 
 Tài liệu Java Backend — từ JVM đến Microservices.

@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # Java Fundamentals
 
 Core Java concepts: data types, operators, control flow, arrays, strings, methods, enum, file I/O, and object-oriented programming.

@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # Environment Setup
 
 Installation and configuration guide for a Java development environment on Windows, macOS, and Linux: JDK 21, IDE, Git, and Maven.

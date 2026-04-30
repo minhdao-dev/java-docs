@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # Java Advanced
 
 Collections Framework, Generics, Lambda, Stream API, Date/Time API, Annotations & Reflection, exception handling, and concurrency.

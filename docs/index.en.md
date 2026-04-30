@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # NMD Docs
 
 Java Backend documentation — from JVM to Microservices.

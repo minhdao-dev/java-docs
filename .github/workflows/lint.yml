@@ -1,0 +1,52 @@
+name: Lint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+# Ba job chạy song song — không phụ thuộc nhau
+# Tất cả đều chạy dù job khác fail (không có needs:)
+jobs:
+  markdownlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: 'docs/**/*.md'
+
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: lycheeverse/lychee-action@v1
+        with:
+          # Chỉ check external links (https/http) — bỏ qua relative markdown links
+          # để tránh false positive từ MkDocs routing
+          args: >-
+            --scheme https
+            --scheme http
+            --timeout 30
+            --exclude-loopback
+            --exclude 'mailto:'
+            --exclude 'github\.com/[^/]+/[^/]+/edit/'
+            --github-token ${{ secrets.GITHUB_TOKEN }}
+            --no-progress
+            docs/**/*.md
+          fail: true
+
+  spellcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Chỉ check file .en.md — .vi.md bỏ qua hoàn toàn
+      - uses: streetsidesoftware/cspell-action@v6
+        with:
+          files: 'docs/**/*.en.md'
+          config: cspell.json
+          inline: warning
+          strict: true

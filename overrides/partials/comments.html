@@ -1,0 +1,71 @@
+{% if page.meta.comments != false %}
+
+{% if page.file.src_path.endswith('.en.md') %}
+<h2 id="__comments">Comments</h2>
+{% else %}
+<h2 id="__comments">Bình luận</h2>
+{% endif %}
+
+<!-- ═══════════════════════════════════════════════════════════════
+     Giscus — GitHub Discussions comment system
+     Sau khi làm pre-requisite ở README, paste 2 ID vào đây:
+     1. data-repo-id   → lấy từ https://giscus.app
+     2. data-category-id → lấy từ https://giscus.app
+     ═══════════════════════════════════════════════════════════════ -->
+<script
+  src="https://giscus.app/client.js"
+  data-repo="minhdao-dev/java-docs"
+  data-repo-id="R_kgDOSN-vXA"
+  data-category="General"
+  data-category-id="DIC_kwDOSN-vXM4C8ARZ"
+  data-mapping="pathname"
+  data-strict="0"
+  data-reactions-enabled="1"
+  data-emit-metadata="0"
+  data-input-position="top"
+  data-theme="noborder_light"
+  data-lang="{% if page.file.src_path.endswith('.en.md') %}en{% else %}vi{% endif %}"
+  data-loading="lazy"
+  crossorigin="anonymous"
+  async>
+</script>
+
+<script>
+  // Set initial Giscus theme from stored MkDocs palette (runs before Giscus iframe loads)
+  ;(function () {
+    var palette = __md_get("__palette")
+    if (palette && typeof palette.color === "object") {
+      var giscusScript = document.querySelector("#__comments ~ script[src*='giscus']")
+      if (giscusScript) {
+        giscusScript.setAttribute(
+          "data-theme",
+          palette.color.scheme === "slate" ? "noborder_gray" : "noborder_light"
+        )
+      }
+    }
+  })()
+
+  // Sync Giscus theme when user toggles light/dark
+  document.addEventListener("DOMContentLoaded", function () {
+    var palette = document.querySelector("[data-md-color-scheme]")
+    if (!palette) return
+    new MutationObserver(function () {
+      var iframe = document.querySelector(".giscus-frame")
+      if (!iframe) return
+      iframe.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: palette.getAttribute("data-md-color-scheme") === "slate"
+                ? "noborder_gray"
+                : "noborder_light"
+            }
+          }
+        },
+        "https://giscus.app"
+      )
+    }).observe(palette, { attributes: true, attributeFilter: ["data-md-color-scheme"] })
+  })
+</script>
+
+{% endif %}

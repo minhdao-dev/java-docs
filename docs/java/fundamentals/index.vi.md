@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # Nền tảng Java
 
 Các khái niệm cốt lõi của Java: kiểu dữ liệu, toán tử, cấu trúc điều khiển, mảng, chuỗi, method, enum, file I/O và lập trình hướng đối tượng.

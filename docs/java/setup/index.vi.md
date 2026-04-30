@@ -1,3 +1,7 @@
+---
+comments: false
+---
+
 # Cài đặt môi trường
 
 Hướng dẫn cài đặt và cấu hình môi trường phát triển Java trên Windows, macOS và Linux: JDK 21, IDE, Git và Maven.
