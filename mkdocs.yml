@@ -1,7 +1,7 @@
-site_name: NMD Docs
+site_name: NMD Java Backend
 site_url: https://minhdao-dev.github.io/java-docs/
-site_description: Tài liệu học lập trình Java Backend
-site_author: NMD
+site_description: "Lộ trình Java Backend từ JVM đến Microservices · Java Backend roadmap from JVM to Microservices"
+site_author: Nguyen Minh Dao
 copyright: Copyright &copy; 2026 NMD
 
 theme:
