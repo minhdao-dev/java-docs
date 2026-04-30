@@ -71,8 +71,6 @@ nav:
       - Records: java/fundamentals/16-records.md
       - Interface: java/fundamentals/17-interface.md
       - instanceof và Type Casting: java/fundamentals/18-instanceof-type-casting.md
-    - Java Nâng cao:
-      - Tổng quan: java/advanced/index.md
 
 plugins:
   - search:
@@ -100,7 +98,6 @@ plugins:
             Java: Java
             Cài đặt môi trường: Environment Setup
             Nền tảng Java: Java Fundamentals
-            Java Nâng cao: Java Advanced
             Tổng quan: Overview
             Cài đặt JDK 21: Install JDK 21
             Cài đặt IDE: Install IDE
