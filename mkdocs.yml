@@ -92,36 +92,6 @@ plugins:
           default: true
           name: Tiếng Việt
           build: true
-          nav_translations:
-            Trang chủ: Trang chủ
-            Java: Java
-            Cài đặt môi trường: Cài đặt môi trường
-            Nền tảng Java: Nền tảng Java
-            Java Nâng cao: Java Nâng cao
-            Tổng quan: Tổng quan
-            Cài đặt JDK 21: Cài đặt JDK 21
-            Cài đặt IDE: Cài đặt IDE
-            Terminal cơ bản: Terminal cơ bản
-            Git và GitHub: Git và GitHub
-            Maven và Hello World: Maven và Hello World
-            JVM — Hoạt động thế nào: JVM — Hoạt động thế nào
-            Kiểu dữ liệu và Biến: Kiểu dữ liệu và Biến
-            Toán tử: Toán tử
-            Rẽ nhánh — if / else / switch: Rẽ nhánh — if / else / switch
-            Vòng lặp — for / while / do-while / for-each: Vòng lặp — for / while / do-while / for-each
-            Mảng — Array 1D & 2D: Mảng — Array 1D & 2D
-            String và StringBuilder: String và StringBuilder
-            Method và Pass-by-value: Method và Pass-by-value
-            Enum: Enum
-            File I/O: File I/O
-            OOP — Class và Object: OOP — Class và Object
-            Encapsulation và Constructor: Encapsulation và Constructor
-            Kế thừa — Inheritance: Kế thừa — Inheritance
-            Đa hình — Polymorphism: Đa hình — Polymorphism
-            Abstract Class: Abstract Class
-            Records: Records
-            Interface: Interface
-            instanceof và Type Casting: instanceof và Type Casting
         - locale: en
           name: English
           build: true
