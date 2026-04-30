@@ -314,6 +314,9 @@ System.out.println(p1);            // Point[x=3, y=4]
 
 ## 8. Code example
 
+!!! info "Verified"
+    Full compilable source: [`OopDemo.java`](https://github.com/minhdao-dev/java-docs/blob/main/examples/src/main/java/fundamentals/oop/OopDemo.java)
+
 ```java
 import java.util.Objects;
 

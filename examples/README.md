@@ -36,11 +36,12 @@ Replace the class name with any of the following:
 | 08 — Methods                | `fundamentals.methods.MethodsDemo` |
 | 09 — Enums                  | `fundamentals.enums.EnumDemo` |
 | 10 — File I/O               | `fundamentals.fileio.StudentStorage` |
+| 11 — OOP: Class & Object    | `fundamentals.oop.OopDemo` |
 | 12 — Encapsulation          | `fundamentals.encapsulation.UserAccount` |
 | 16 — Records                | `fundamentals.records.RecordDemo` |
 | 17 — Interfaces             | `fundamentals.interfaces.InterfaceDemo` |
 | 18 — instanceof & Casting   | `fundamentals.casting.CastingDemo` |
 
-> Lessons 11, 13, 14, 15 do not have example files yet.
+> Lessons 13, 14, 15 do not have example files yet.
 
 > **Note:** `StudentStorage` writes to `data/students.txt` relative to the working directory.
