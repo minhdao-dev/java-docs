@@ -2,6 +2,9 @@
 site/
 mkdocs_server.log
 
+# Maven
+target/
+
 # Python
 __pycache__/
 *.pyc
