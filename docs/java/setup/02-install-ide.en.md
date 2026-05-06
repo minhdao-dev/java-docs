@@ -20,6 +20,7 @@ Writing Java without an IDE is possible, but an IDE catches errors as you type (
 | **IntelliJ IDEA Community** | Beginners and professional developers | ✓ |
 | **Eclipse** | Enterprise environments, legacy projects | ✓ |
 | **VS Code + Java Extension Pack** | Developers already familiar with VS Code | ✓ |
+| **Apache NetBeans** | Beginners, students — friendly UI, Maven built-in | ✓ |
 
 !!! tip "Recommendation for beginners"
     Choose **IntelliJ IDEA Community Edition**. It is the most popular Java IDE, has the most beginner-friendly interface, and most Java learning resources use IntelliJ. You can install other IDEs later once you're comfortable.
@@ -199,20 +200,92 @@ VS Code is a lightweight editor — less resource-heavy than IntelliJ or Eclipse
 
 ---
 
-## 6. Quick Comparison
+## 6. Install Apache NetBeans
 
-| Feature | IntelliJ IDEA CE | Eclipse | VS Code |
-|---------|-----------------|---------|---------|
-| Startup speed | Slower | Medium | Fast |
-| RAM usage | ~500–800 MB | ~400–600 MB | ~200–400 MB |
-| Smart autocomplete | ★★★★★ | ★★★ | ★★★★ |
-| Maven/Gradle integration | Excellent | Good | Good |
-| Community popularity | Very high | High (enterprise) | High (frontend) |
-| Plugins/Extensions | Rich | Rich | Rich |
+NetBeans is an open-source IDE developed by the **Apache Software Foundation**. It is widely used in university Java courses thanks to its straightforward UI, built-in Maven support, and zero configuration required to get started.
+
+=== "Windows"
+
+    ### Step 1 — Download NetBeans
+
+    1. Open a browser and go to:  
+       [https://netbeans.apache.org/front/main/download/](https://netbeans.apache.org/front/main/download/)
+    2. Select the latest release (e.g. **Apache NetBeans 25**).
+    3. Download the **Windows Installer** (`.exe`, ~600 MB).
+
+    ### Step 2 — Run the installer
+
+    1. Open the downloaded `.exe` file.
+    2. Click **Next** on the welcome screen.
+    3. Choose the installation directory (keep the default) → **Next**.
+    4. Verify the **JDK** field points to JDK 21 → **Next**.
+    5. Click **Install** → wait for completion → click **Finish**.
+
+    ### Step 3 — Open NetBeans for the first time
+
+    1. Find **Apache NetBeans IDE** in the Start Menu or double-click the desktop icon.
+    2. First launch may take 30–60 seconds.
+
+=== "macOS"
+
+    ### Option 1 — Download the installer
+
+    1. Go to [https://netbeans.apache.org/front/main/download/](https://netbeans.apache.org/front/main/download/), download the **macOS Installer** (`.dmg`).
+    2. Open the `.dmg` file, drag **Apache NetBeans** to **Applications**.
+
+    ### Option 2 — Install via Homebrew
+
+    ```bash
+    brew install --cask netbeans
+    ```
+
+=== "Linux"
+
+    ### Option 1 — Download .sh installer
+
+    1. Go to [https://netbeans.apache.org/front/main/download/](https://netbeans.apache.org/front/main/download/), download the **Linux Installer** (`.sh`).
+    2. Open a terminal, make it executable and run:
+
+        ```bash
+        chmod +x apache-netbeans-*.sh
+        ./apache-netbeans-*.sh
+        ```
+
+    3. Follow the on-screen instructions.
+
+    ### Option 2 — Snap (Ubuntu)
+
+    ```bash
+    sudo snap install netbeans --classic
+    ```
+
+### Create your first project in NetBeans
+
+1. Click **New Project** (or **File → New Project**).
+2. Select **Java with Maven → Java Application** → click **Next**.
+3. Enter a project name (e.g. `HelloWorld`) → click **Finish**.
+4. NetBeans creates `App.java` in the `src` directory.
+5. Click **▶ Run Project** (or press `F6`) to run.
+
+!!! success "Success if"
+    The **Output** panel at the bottom shows the program's output. NetBeans is correctly connected to JDK 21.
 
 ---
 
-## 7. Keyboard shortcuts to learn now
+## 7. Quick Comparison
+
+| Feature | IntelliJ IDEA CE | Eclipse | VS Code | NetBeans |
+|---------|-----------------|---------|---------|---------|
+| Startup speed | Slower | Medium | Fast | Medium |
+| RAM usage | ~500–800 MB | ~400–600 MB | ~200–400 MB | ~300–500 MB |
+| Smart autocomplete | ★★★★★ | ★★★ | ★★★★ | ★★★★ |
+| Maven/Gradle integration | Excellent | Good | Good | Good (Maven built-in) |
+| Community popularity | Very high | High (enterprise) | High (frontend) | Medium (academic) |
+| Plugins/Extensions | Rich | Rich | Rich | Moderate |
+
+---
+
+## 8. Keyboard shortcuts to learn now
 
 === "IntelliJ IDEA"
 
@@ -247,9 +320,21 @@ VS Code is a lightweight editor — less resource-heavy than IntelliJ or Eclipse
     | Auto-format code | `Shift + Alt + F` | `Shift + Option + F` |
     | Open Command Palette | `Ctrl + Shift + P` | `Cmd + Shift + P` |
 
+=== "NetBeans"
+
+    | Action | Windows / Linux | macOS |
+    |--------|-----------------|-------|
+    | Run project | `F6` | `F6` |
+    | Debug project | `F5` | `F5` |
+    | Autocomplete suggestions | `Ctrl + Space` | `Ctrl + Space` |
+    | Comment/uncomment line | `Ctrl + /` | `Cmd + /` |
+    | Auto-format code | `Alt + Shift + F` | `Option + Shift + F` |
+    | Fix imports automatically | `Ctrl + Shift + I` | `Cmd + Shift + I` |
+    | Build project | `F11` | `F11` |
+
 ---
 
-## 8. Troubleshooting
+## 9. Troubleshooting
 
 ### IntelliJ does not recognize the JDK
 
@@ -272,6 +357,21 @@ Open VS Code Settings (`Ctrl + ,`), search for `java.jdt.ls.java.home`, and set 
 **Cause:** Eclipse needs more memory.
 
 **Fix:** Open the `eclipse.ini` file in the Eclipse installation folder, find the `-Xmx` line and increase it to `-Xmx2g` (2 GB maximum RAM).
+
+### NetBeans does not recognize the JDK
+
+**Symptom:** NetBeans shows "No Java Platform defined" or cannot build any project.
+
+**Fix:**
+1. Go to **Tools → Java Platforms**.
+2. Click **Add Platform** → select **Java Standard Edition** → **Next**.
+3. Point to the JDK 21 directory → **Next** → **Finish**.
+
+### NetBeans starts very slowly
+
+**Cause:** The default memory allocation for NetBeans is low.
+
+**Fix:** Open the `netbeans.conf` file in the installation directory (usually `C:\Program Files\NetBeans-25\netbeans\etc\`), find the `netbeans_default_options` line, and append `-J-Xmx2g` to the end of the options string.
 
 ---
 

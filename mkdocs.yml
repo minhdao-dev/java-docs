@@ -71,6 +71,34 @@ nav:
       - Records: java/fundamentals/16-records.md
       - Interface: java/fundamentals/17-interface.md
       - instanceof và Type Casting: java/fundamentals/18-instanceof-type-casting.md
+    - Bài tập:
+      - Tổng quan: java/exercises/index.md
+      - Giai đoạn 1 — Nền tảng ngôn ngữ:
+        - Tổng quan: java/exercises/phase1/index.md
+        - 01. Biến, Kiểu dữ liệu, Toán tử: java/exercises/phase1/01-variables.md
+        - 02. Câu điều kiện: java/exercises/phase1/02-conditions.md
+        - 03. Vòng lặp: java/exercises/phase1/03-loops.md
+        - 04. Hàm (Method): java/exercises/phase1/04-methods.md
+        - 05. String: java/exercises/phase1/05-strings.md
+      - Giai đoạn 2 — Tư duy lập trình:
+        - Tổng quan: java/exercises/phase2/index.md
+        - 06. Array & Two Pointers: java/exercises/phase2/06-array-two-pointers.md
+        - 07. HashMap & HashSet: java/exercises/phase2/07-hashmap-hashset.md
+        - 08. Stack & Queue: java/exercises/phase2/08-stack-queue.md
+        - 09. Đệ quy (Recursion): java/exercises/phase2/09-recursion.md
+      - Giai đoạn 3 — Thuật toán cơ bản:
+        - Tổng quan: java/exercises/phase3/index.md
+        - 10. Sắp xếp & Tìm kiếm nhị phân: java/exercises/phase3/10-sorting-binary-search.md
+        - 11. Sliding Window: java/exercises/phase3/11-sliding-window.md
+        - 12. Linked List: java/exercises/phase3/12-linked-list.md
+        - 13. Tree & Graph cơ bản: java/exercises/phase3/13-tree-graph.md
+      - Giai đoạn 4 — Java Advanced:
+        - Tổng quan: java/exercises/phase4/index.md
+        - 14. OOP: java/exercises/phase4/14-oop.md
+        - 15. Collections Framework: java/exercises/phase4/15-collections.md
+        - 16. Stream API & Lambda: java/exercises/phase4/16-stream-lambda.md
+        - 17. Exception & DateTime: java/exercises/phase4/17-exception-datetime.md
+        - 18. Concurrency: java/exercises/phase4/18-concurrency.md
 
 plugins:
   - search:
@@ -122,6 +150,29 @@ plugins:
             Records: Records
             Interface: Interface
             instanceof và Type Casting: instanceof and Type Casting
+            Bài tập: Exercises
+            Giai đoạn 1 — Nền tảng ngôn ngữ: Phase 1 — Language Fundamentals
+            01. Biến, Kiểu dữ liệu, Toán tử: 01. Variables, Data Types, Operators
+            02. Câu điều kiện: 02. Conditionals
+            03. Vòng lặp: 03. Loops
+            04. Hàm (Method): 04. Methods
+            05. String: 05. String
+            Giai đoạn 2 — Tư duy lập trình: Phase 2 — Programming Thinking
+            06. Array & Two Pointers: 06. Array & Two Pointers
+            07. HashMap & HashSet: 07. HashMap & HashSet
+            08. Stack & Queue: 08. Stack & Queue
+            09. Đệ quy (Recursion): 09. Recursion
+            Giai đoạn 3 — Thuật toán cơ bản: Phase 3 — Core Algorithms
+            10. Sắp xếp & Tìm kiếm nhị phân: 10. Sorting & Binary Search
+            11. Sliding Window: 11. Sliding Window
+            12. Linked List: 12. Linked List
+            13. Tree & Graph cơ bản: 13. Tree & Graph Basics
+            Giai đoạn 4 — Java Advanced: Phase 4 — Java Advanced
+            14. OOP: 14. OOP
+            15. Collections Framework: 15. Collections Framework
+            16. Stream API & Lambda: 16. Stream API & Lambda
+            17. Exception & DateTime: 17. Exception & DateTime
+            18. Concurrency: 18. Concurrency
 
 markdown_extensions:
   - admonition
